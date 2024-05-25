@@ -9,6 +9,7 @@ radius = 20.0
 [node name="Marble" type="RigidBody2D"]
 position = Vector2(167, 0)
 script = ExtResource("1_7mjn2")
+extra_h_speed = 50
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_88wns")

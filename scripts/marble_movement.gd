@@ -4,7 +4,7 @@ extends RigidBody2D
 @onready var collision_shape_2d = $CollisionShape2D
 @onready var sprite_2d = $Sprite2D
 
-
+@export var extra_h_speed:int
 #● void apply_central_force(force: Vector2)
 #Applies a directional force without affecting rotation. A force is time dependent and meant to be applied every physics update.
 #This is equivalent to using apply_force() at the body's center of mass.
@@ -14,8 +14,12 @@ enum size {small, normal, big}
 var current_size: int = 1
 
 func _physics_process(delta):
+
+	if get_linear_velocity().y <= 0  and get_linear_velocity().x >= -1 and abs(get_linear_velocity().x) <= 50:
 	#						Speed, Gravity
-#	apply_central_force(Vector2(200,-20))
+#		apply_central_force(Vector2(extra_h_speed if get_linear_velocity().x > 0 else (-1* extra_h_speed),4000))
+		pass
+		
 	match current_size:
 		size.small: 
 			collision_shape_2d.set_scale(Vector2(0.5,0.5))
