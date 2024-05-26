@@ -33,6 +33,12 @@ Restart={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="marble"
+2d_physics/layer_2="track"
+2d_physics/layer_3="addons"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

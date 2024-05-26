@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://ct0kfg26tckfs"]
+[gd_scene load_steps=13 format=3 uid="uid://ct0kfg26tckfs"]
 
 [ext_resource type="PackedScene" uid="uid://c28mwy6ote8d" path="res://scenes/marble.tscn" id="1_6u6cr"]
 [ext_resource type="Script" path="res://scripts/FollowCamera.gd" id="1_bbp4u"]
 [ext_resource type="PackedScene" uid="uid://c3pl2mg6e4rol" path="res://scenes/Pinball.tscn" id="3_1f1ho"]
+[ext_resource type="PackedScene" uid="uid://pjhqypun8xd6" path="res://scenes/CircleDeLoop.tscn" id="4_i6ia0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f1rvn"]
 size = Vector2(400.504, 20)
@@ -39,6 +40,7 @@ position = Vector2(236, 52)
 
 [node name="Marble" parent="." node_paths=PackedStringArray("starting_point") instance=ExtResource("1_6u6cr")]
 position = Vector2(238, 52)
+collision_mask = 7
 starting_point = NodePath("../StartingPoint")
 
 [node name="section 1" type="Node2D" parent="."]
@@ -202,7 +204,6 @@ rotation = -0.68156
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Section4/StaticBody2D5"]
 position = Vector2(27.7657, 6.66187)
 rotation = -1.27
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_a3psp")
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="Section4"]
@@ -212,7 +213,6 @@ rotation = -0.68156
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Section4/StaticBody2D6"]
 position = Vector2(63.6664, 65.6545)
 rotation = -0.754405
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_2aael")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Section4"]
@@ -222,5 +222,8 @@ position = Vector2(1302, 1176)
 position = Vector2(103, 30)
 rotation = -1.27
 shape = SubResource("RectangleShape2D_k42pa")
+
+[node name="Node2D" parent="Section4" instance=ExtResource("4_i6ia0")]
+position = Vector2(1622, 1253)
 
 [editable path="Section3/AnimatableBody2D"]
