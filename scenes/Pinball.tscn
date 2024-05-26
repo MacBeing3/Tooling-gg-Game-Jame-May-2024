@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c3pl2mg6e4rol"]
+[gd_scene load_steps=8 format=3 uid="uid://c3pl2mg6e4rol"]
 
 [ext_resource type="Script" path="res://scenes/Pinball.gd" id="1_mgtq0"]
 
@@ -57,6 +57,12 @@ _data = {
 "fling": SubResource("Animation_iot1v")
 }
 
+[sub_resource type="Curve2D" id="Curve2D_n4r52"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -25, 81, 0, 0, 0, 0, -179, 48, 0, 0, 0, 0, -80, -229, 0, 0, 0, 0, -119, 215)
+}
+point_count = 4
+
 [node name="AnimatableBody2D" type="AnimatableBody2D"]
 position = Vector2(217, 172)
 rotation = 1.5708
@@ -71,6 +77,9 @@ shape = SubResource("CapsuleShape2D_jh6t3")
 libraries = {
 "": SubResource("AnimationLibrary_d0ggb")
 }
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_n4r52")
 
 [node name="TravelPoints" type="Node2D" parent="."]
 
