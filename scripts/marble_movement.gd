@@ -17,8 +17,8 @@ func _physics_process(delta):
 
 	if get_linear_velocity().y <= 0  and get_linear_velocity().x >= -1 and abs(get_linear_velocity().x) <= 50:
 	#						Speed, Gravity
-#		apply_central_force(Vector2(extra_h_speed if get_linear_velocity().x > 0 else (-1* extra_h_speed),4000))
-		pass
+		apply_central_force(Vector2(extra_h_speed if get_linear_velocity().x > 0 else (-1* extra_h_speed),4000))
+		
 		
 	match current_size:
 		size.small: 
@@ -44,4 +44,8 @@ func _input(event):
 	if event.is_action_pressed("Grow") and current_size != 2: current_size += 1
 
 	if event.is_action_pressed("Shrink") and current_size != 0: current_size -= 1
+	
+#	if event.is_action_pressed("ui_accept"):
+#		set_linear_velocity(Vector2(0,0))
+
 
