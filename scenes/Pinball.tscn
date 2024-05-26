@@ -46,9 +46,12 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"values": []
+"times": PackedFloat32Array(0.35),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_attach_marble_to_path"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_d0ggb"]
@@ -59,9 +62,9 @@ _data = {
 
 [sub_resource type="Curve2D" id="Curve2D_n4r52"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -21.9996, 81.0001, 0, 0, 0, 0, -187, 80.0007, 0, 0, 0, 0, -769, 101.003, 0, 0, 0, 0, -809, 88.0029, 0, 0, 0, 0, -823, 47.003, 0, 0, 0, 0, -807.001, -250.997, 0, 0, 0, 0, -800.001, -319.997, 0, 0, 0, 0, -776.001, -412.997, 0, 0, 0, 0, -719.002, -464.997)
+"points": PackedVector2Array(0, 0, 0, 0, -21.9996, 81.0001, 0, 0, 0, 0, -187, 80.0007, 0, 0, 0, 0, -768, 107.003, 0, 0, 0, 0, -809, 88.0029, 0, 0, 0, 0, -821.81, 48.3378, 0, 0, 0, 0, -820.001, -247.997, 0, 0, 0, 0, -811.001, -280.997, 0, 0, 0, 0, -791.001, -317.997, 0, 0, 0, 0, -758.034, -362.727, 0, 0, 0, 0, -655.716, -421.341)
 }
-point_count = 9
+point_count = 10
 
 [node name="Pinball" type="AnimatableBody2D"]
 position = Vector2(217, 172)

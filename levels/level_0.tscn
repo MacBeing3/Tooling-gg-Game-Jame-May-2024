@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ct0kfg26tckfs"]
+[gd_scene load_steps=12 format=3 uid="uid://ct0kfg26tckfs"]
 
 [ext_resource type="PackedScene" uid="uid://c28mwy6ote8d" path="res://scenes/marble.tscn" id="1_6u6cr"]
 [ext_resource type="Script" path="res://scripts/FollowCamera.gd" id="1_bbp4u"]
@@ -19,14 +19,27 @@ size = Vector2(20, 139)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1l5x"]
 size = Vector2(24, 487)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k42pa"]
+size = Vector2(20, 209)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a3psp"]
+size = Vector2(20, 51.4581)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2aael"]
+size = Vector2(20, 198.403)
+
 [node name="Level0" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("main_marble")]
 script = ExtResource("1_bbp4u")
 main_marble = NodePath("../Marble")
 
-[node name="Marble" parent="." instance=ExtResource("1_6u6cr")]
-position = Vector2(245, 535)
+[node name="StartingPoint" type="Node2D" parent="."]
+position = Vector2(236, 52)
+
+[node name="Marble" parent="." node_paths=PackedStringArray("starting_point") instance=ExtResource("1_6u6cr")]
+position = Vector2(238, 52)
+starting_point = NodePath("../StartingPoint")
 
 [node name="section 1" type="Node2D" parent="."]
 
@@ -123,10 +136,8 @@ shape = SubResource("RectangleShape2D_f1rvn")
 position = Vector2(665, 1513)
 player_marble = NodePath("../../Marble")
 
-[node name="PathFollow2D" parent="Section3/AnimatableBody2D/Path2D" index="0"]
-position = Vector2(-775.37, 98.9323)
-rotation = -2.82736
-progress = 754.057
+[node name="Path2D" parent="Section3/AnimatableBody2D" index="2"]
+rotation = 0.00405741
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Section3"]
 position = Vector2(620, 1506)
@@ -156,5 +167,60 @@ position = Vector2(596, 1013)
 position = Vector2(-21, -291.75)
 scale = Vector2(3.71875, 4.85938)
 polygon = PackedVector2Array(-10, 10, -5, 0, 0, -5, 7, -8, 10, -8, 10, -10, -10, -10)
+
+[node name="Section4" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Section4"]
+position = Vector2(1047, 857)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Section4/StaticBody2D"]
+position = Vector2(78, 81)
+rotation = -0.861371
+shape = SubResource("RectangleShape2D_k42pa")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Section4"]
+position = Vector2(1201, 1007)
+rotation = 0.0725043
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Section4/StaticBody2D2"]
+position = Vector2(98, 12)
+rotation = -1.38807
+shape = SubResource("RectangleShape2D_k42pa")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Section4"]
+position = Vector2(1101, 1113)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Section4/StaticBody2D3"]
+position = Vector2(103, 30)
+rotation = -1.27
+shape = SubResource("RectangleShape2D_k42pa")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Section4"]
+position = Vector2(1462, 1059)
+rotation = -0.68156
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Section4/StaticBody2D5"]
+position = Vector2(27.7657, 6.66187)
+rotation = -1.27
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_a3psp")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Section4"]
+position = Vector2(1514, 1041)
+rotation = -0.68156
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Section4/StaticBody2D6"]
+position = Vector2(63.6664, 65.6545)
+rotation = -0.754405
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_2aael")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Section4"]
+position = Vector2(1302, 1176)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Section4/StaticBody2D4"]
+position = Vector2(103, 30)
+rotation = -1.27
+shape = SubResource("RectangleShape2D_k42pa")
 
 [editable path="Section3/AnimatableBody2D"]

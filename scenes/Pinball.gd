@@ -1,6 +1,5 @@
 extends AnimatableBody2D
 
-@onready var travel_points_parent = get_node("TravelPoints")
 @onready var path_follow:= $Path2D/PathFollow2D
 
 
@@ -23,12 +22,12 @@ func _physics_process(delta):
 		fling_speed += fling_accel 
 		path_follow.progress += fling_speed  * delta
 		print("pathfollow ration  " ,path_follow.progress_ratio)
-		if path_follow.progress_ratio >= 0.95:
+		if path_follow.progress >= 1350:
 			_detatch_marble_from_path()
 		
 func _input(event):
 	if event.is_action_pressed("ui_accept"):
-		_attach_marble_to_path()
+#		_attach_marble_to_path()
 		$AnimationPlayer.play("fling")
 		
 		
@@ -47,7 +46,8 @@ func _input(event):
 func _attach_marble_to_path():
 	
 	player_marble.is_attached = true
-	
+	player_marble.linear_velocity = Vector2.ZERO
+	player_marble.angular_velocity = 5
 	player_marble.node_attached_to = path_follow
 	
 	
