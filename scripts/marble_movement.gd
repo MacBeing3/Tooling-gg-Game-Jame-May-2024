@@ -5,13 +5,19 @@ extends RigidBody2D
 @onready var sprite_2d = $Sprite2D
 
 @export var extra_h_speed:int
-#● void apply_central_force(force: Vector2)
-#Applies a directional force without affecting rotation. A force is time dependent and meant to be applied every physics update.
-#This is equivalent to using apply_force() at the body's center of mass.
+
 
 enum size {small, normal, big}
 
+
+var is_attached:bool=false
+var node_attached_to:Node2D
 var current_size: int = 1
+
+func _process(delta):
+	if is_attached:
+		freeze
+		global_position = node_attached_to.global_position
 
 func _physics_process(delta):
 
@@ -30,14 +36,15 @@ func _physics_process(delta):
 		
 		size.big:
 			collision_shape_2d.set_scale(Vector2(1.25,1.25))
-			sprite_2d.set_scale(Vector2(1.25,1.25))
+			sprite_2d.set_scale(Vector2(1.5,1.5))
 		
 		
-		
+#	if is_attached:
+#		freeze
+#		global_position = node_attached_to.global_position
 	
 	
-	if current_size == size.big:
-		set_scale(Vector2(2,2))
+
 	
 func _input(event):
 

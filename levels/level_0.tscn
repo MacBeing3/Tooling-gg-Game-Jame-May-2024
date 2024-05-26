@@ -123,6 +123,11 @@ shape = SubResource("RectangleShape2D_f1rvn")
 position = Vector2(665, 1513)
 player_marble = NodePath("../../Marble")
 
+[node name="PathFollow2D" parent="Section3/AnimatableBody2D/Path2D" index="0"]
+position = Vector2(-775.37, 98.9323)
+rotation = -2.82736
+progress = 754.057
+
 [node name="StaticBody2D" type="StaticBody2D" parent="Section3"]
 position = Vector2(620, 1506)
 
@@ -138,7 +143,7 @@ position = Vector2(12, 180.25)
 shape = SubResource("RectangleShape2D_g1l5x")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Section3"]
-position = Vector2(603, 1013)
+position = Vector2(599, 1001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Section3/StaticBody2D3"]
 position = Vector2(10, 153.5)
@@ -151,3 +156,5 @@ position = Vector2(596, 1013)
 position = Vector2(-21, -291.75)
 scale = Vector2(3.71875, 4.85938)
 polygon = PackedVector2Array(-10, 10, -5, 0, 0, -5, 7, -8, 10, -8, 10, -10, -10, -10)
+
+[editable path="Section3/AnimatableBody2D"]
