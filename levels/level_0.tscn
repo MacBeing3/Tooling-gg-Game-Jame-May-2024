@@ -1,12 +1,19 @@
-[gd_scene load_steps=13 format=3 uid="uid://ct0kfg26tckfs"]
+[gd_scene load_steps=16 format=3 uid="uid://ct0kfg26tckfs"]
 
 [ext_resource type="PackedScene" uid="uid://c28mwy6ote8d" path="res://scenes/marble.tscn" id="1_6u6cr"]
 [ext_resource type="Script" path="res://scripts/FollowCamera.gd" id="1_bbp4u"]
 [ext_resource type="PackedScene" uid="uid://c3pl2mg6e4rol" path="res://scenes/Pinball.tscn" id="3_1f1ho"]
+[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://gui/color.tres" id="3_fdx2s"]
 [ext_resource type="PackedScene" uid="uid://pjhqypun8xd6" path="res://scenes/CircleDeLoop.tscn" id="4_i6ia0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t54ht"]
+shader = ExtResource("3_fdx2s")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f1rvn"]
 size = Vector2(400.504, 20)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u8gxv"]
+shader = ExtResource("3_fdx2s")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fkvdf"]
 size = Vector2(31.2452, 20)
@@ -49,6 +56,7 @@ starting_point = NodePath("../StartingPoint")
 position = Vector2(393, 248)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="section 1/StaticBody2D"]
+material = SubResource("ShaderMaterial_t54ht")
 rotation = 0.45057
 shape = SubResource("RectangleShape2D_f1rvn")
 
@@ -56,6 +64,7 @@ shape = SubResource("RectangleShape2D_f1rvn")
 position = Vector2(488, 194)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="section 1/StaticBody2D5"]
+material = SubResource("ShaderMaterial_u8gxv")
 rotation = 0.45057
 shape = SubResource("RectangleShape2D_f1rvn")
 
