@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://pjhqypun8xd6"]
+[gd_scene load_steps=12 format=3 uid="uid://pjhqypun8xd6"]
 
 [ext_resource type="Script" path="res://scripts/CircleDeLoop.gd" id="1_c6jyc"]
 [ext_resource type="Script" path="res://scripts/PlayerDetector.gd" id="2_d2yor"]
+[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://gui/color.tres" id="3_ue7a8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d74q5"]
 radius = 73.0069
@@ -148,6 +149,9 @@ _data = {
 "rotate1": SubResource("Animation_qj1gq")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o1aog"]
+shader = ExtResource("3_ue7a8")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nex32"]
 size = Vector2(33, 21)
 
@@ -192,6 +196,7 @@ play_animation = NodePath("../AnimationPlayer")
 animation_name = "rotate1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
+material = SubResource("ShaderMaterial_o1aog")
 position = Vector2(-85, -7)
 shape = SubResource("RectangleShape2D_nex32")
 debug_color = Color(0.690196, 0, 0.647059, 0.419608)
