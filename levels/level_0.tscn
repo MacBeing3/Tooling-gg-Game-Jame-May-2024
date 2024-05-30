@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://ct0kfg26tckfs"]
+[gd_scene load_steps=39 format=3 uid="uid://ct0kfg26tckfs"]
 
 [ext_resource type="PackedScene" uid="uid://c28mwy6ote8d" path="res://scenes/marble.tscn" id="1_6u6cr"]
 [ext_resource type="Script" path="res://scripts/FollowCamera.gd" id="1_bbp4u"]
 [ext_resource type="PackedScene" uid="uid://c3pl2mg6e4rol" path="res://scenes/Pinball.tscn" id="3_1f1ho"]
-[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://gui/color.tres" id="3_fdx2s"]
+[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://color.tres" id="3_fdx2s"]
 [ext_resource type="PackedScene" uid="uid://pjhqypun8xd6" path="res://scenes/CircleDeLoop.tscn" id="4_i6ia0"]
+[ext_resource type="Texture2D" uid="uid://yys88ln3ehwe" path="res://gui/black.png" id="6_v05fr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t54ht"]
 shader = ExtResource("3_fdx2s")
@@ -15,28 +16,101 @@ size = Vector2(400.504, 20)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u8gxv"]
 shader = ExtResource("3_fdx2s")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vq4in"]
+shader = ExtResource("3_fdx2s")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3c7ao"]
+shader = ExtResource("3_fdx2s")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4gdno"]
+shader = ExtResource("3_fdx2s")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fkvdf"]
 size = Vector2(31.2452, 20)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qch6f"]
+shader = ExtResource("3_fdx2s")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lihv7"]
+shader = ExtResource("3_fdx2s")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_imgtj"]
+shader = ExtResource("3_fdx2s")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kln0x"]
+shader = ExtResource("3_fdx2s")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r4rle"]
 size = Vector2(283.025, 20)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bhfxm"]
+shader = ExtResource("3_fdx2s")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cf4qq"]
+shader = ExtResource("3_fdx2s")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rgw36"]
+shader = ExtResource("3_fdx2s")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8uvyh"]
+shader = ExtResource("3_fdx2s")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4nn3t"]
 size = Vector2(20, 139)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5x4ch"]
+shader = ExtResource("3_fdx2s")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1l5x"]
 size = Vector2(24, 487)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u7jp0"]
+shader = ExtResource("3_fdx2s")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fvrup"]
+shader = ExtResource("3_fdx2s")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tu5dg"]
+shader = ExtResource("3_fdx2s")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_020s4"]
+shader = ExtResource("3_fdx2s")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k42pa"]
 size = Vector2(20, 209)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ku5d8"]
+shader = ExtResource("3_fdx2s")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nggh3"]
+shader = ExtResource("3_fdx2s")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sxgcj"]
+shader = ExtResource("3_fdx2s")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a3psp"]
 size = Vector2(20, 51.4581)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lodgl"]
+shader = ExtResource("3_fdx2s")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2aael"]
 size = Vector2(20, 198.403)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jm8el"]
+shader = ExtResource("3_fdx2s")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yui5q"]
+shader = ExtResource("3_fdx2s")
+
 [node name="Level0" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -596.0
+offset_top = -121.0
+offset_right = 6300.0
+offset_bottom = 4839.0
+texture = ExtResource("6_v05fr")
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("main_marble")]
 script = ExtResource("1_bbp4u")
@@ -73,6 +147,7 @@ position = Vector2(647, 310)
 rotation = -0.195306
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="section 1/StaticBody2D2"]
+material = SubResource("ShaderMaterial_vq4in")
 position = Vector2(-9.77466, 21.9193)
 rotation = 0.194728
 shape = SubResource("RectangleShape2D_f1rvn")
@@ -82,6 +157,7 @@ position = Vector2(954, 460)
 rotation = -1.06168
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="section 1/StaticBody2D9"]
+material = SubResource("ShaderMaterial_3c7ao")
 position = Vector2(-9.77466, 21.9193)
 rotation = 0.194728
 shape = SubResource("RectangleShape2D_f1rvn")
@@ -91,6 +167,7 @@ position = Vector2(647, 310)
 rotation = -0.195306
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="section 1/StaticBody2D6"]
+material = SubResource("ShaderMaterial_4gdno")
 position = Vector2(230.875, 69.6353)
 rotation = 0.194728
 shape = SubResource("RectangleShape2D_fkvdf")
@@ -100,6 +177,7 @@ position = Vector2(769, 310)
 rotation = -0.195306
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="section 1/StaticBody2D8"]
+material = SubResource("ShaderMaterial_qch6f")
 position = Vector2(240.685, 71.576)
 rotation = 0.194728
 shape = SubResource("RectangleShape2D_fkvdf")
@@ -109,6 +187,7 @@ position = Vector2(713, 310)
 rotation = -0.195306
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="section 1/StaticBody2D7"]
+material = SubResource("ShaderMaterial_lihv7")
 position = Vector2(230.875, 69.6353)
 rotation = 0.194728
 shape = SubResource("RectangleShape2D_fkvdf")
@@ -120,6 +199,7 @@ position = Vector2(229, 591)
 rotation = 0.44589
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Section 2/StaticBody2D3"]
+material = SubResource("ShaderMaterial_imgtj")
 rotation = 0.45057
 shape = SubResource("RectangleShape2D_f1rvn")
 
@@ -128,6 +208,7 @@ position = Vector2(492, 919)
 rotation = 0.44589
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Section 2/StaticBody2D10"]
+material = SubResource("ShaderMaterial_kln0x")
 position = Vector2(-52.8771, -25.5798)
 rotation = 0.45057
 shape = SubResource("RectangleShape2D_r4rle")
@@ -137,6 +218,7 @@ position = Vector2(596, 611)
 rotation = -0.196067
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Section 2/StaticBody2D4"]
+material = SubResource("ShaderMaterial_bhfxm")
 position = Vector2(-7.65012, 37.2435)
 rotation = 0.194728
 shape = SubResource("RectangleShape2D_f1rvn")
@@ -147,13 +229,20 @@ shape = SubResource("RectangleShape2D_f1rvn")
 position = Vector2(665, 1513)
 player_marble = NodePath("../../Marble")
 
+[node name="CollisionShape2D" parent="Section3/AnimatableBody2D" index="0"]
+material = SubResource("ShaderMaterial_cf4qq")
+
 [node name="Path2D" parent="Section3/AnimatableBody2D" index="2"]
 rotation = 0.00405741
+
+[node name="CollisionShape2D" parent="Section3/AnimatableBody2D/PlayerDetector" index="0"]
+material = SubResource("ShaderMaterial_rgw36")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Section3"]
 position = Vector2(620, 1506)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Section3/StaticBody2D"]
+material = SubResource("ShaderMaterial_8uvyh")
 position = Vector2(12, 33)
 shape = SubResource("RectangleShape2D_4nn3t")
 
@@ -161,6 +250,7 @@ shape = SubResource("RectangleShape2D_4nn3t")
 position = Vector2(542, 1029)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Section3/StaticBody2D2"]
+material = SubResource("ShaderMaterial_5x4ch")
 position = Vector2(12, 180.25)
 shape = SubResource("RectangleShape2D_g1l5x")
 
@@ -168,6 +258,7 @@ shape = SubResource("RectangleShape2D_g1l5x")
 position = Vector2(599, 1001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Section3/StaticBody2D3"]
+material = SubResource("ShaderMaterial_u7jp0")
 position = Vector2(10, 153.5)
 shape = SubResource("RectangleShape2D_g1l5x")
 
@@ -175,6 +266,7 @@ shape = SubResource("RectangleShape2D_g1l5x")
 position = Vector2(596, 1013)
 
 [node name="StaticBody2D4" type="CollisionPolygon2D" parent="Section3/StaticBody2D5"]
+material = SubResource("ShaderMaterial_fvrup")
 position = Vector2(-21, -291.75)
 scale = Vector2(3.71875, 4.85938)
 polygon = PackedVector2Array(-10, 10, -5, 0, 0, -5, 7, -8, 10, -8, 10, -10, -10, -10)
@@ -182,9 +274,11 @@ polygon = PackedVector2Array(-10, 10, -5, 0, 0, -5, 7, -8, 10, -8, 10, -10, -10,
 [node name="Section4" type="Node2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Section4"]
+material = SubResource("ShaderMaterial_tu5dg")
 position = Vector2(1047, 857)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Section4/StaticBody2D"]
+material = SubResource("ShaderMaterial_020s4")
 position = Vector2(78, 81)
 rotation = -0.861371
 shape = SubResource("RectangleShape2D_k42pa")
@@ -194,6 +288,7 @@ position = Vector2(1201, 1007)
 rotation = 0.0725043
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Section4/StaticBody2D2"]
+material = SubResource("ShaderMaterial_ku5d8")
 position = Vector2(98, 12)
 rotation = -1.38807
 shape = SubResource("RectangleShape2D_k42pa")
@@ -202,6 +297,7 @@ shape = SubResource("RectangleShape2D_k42pa")
 position = Vector2(1101, 1113)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Section4/StaticBody2D3"]
+material = SubResource("ShaderMaterial_nggh3")
 position = Vector2(103, 30)
 rotation = -1.27
 shape = SubResource("RectangleShape2D_k42pa")
@@ -211,6 +307,7 @@ position = Vector2(1462, 1059)
 rotation = -0.68156
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Section4/StaticBody2D5"]
+material = SubResource("ShaderMaterial_sxgcj")
 position = Vector2(27.7657, 6.66187)
 rotation = -1.27
 shape = SubResource("RectangleShape2D_a3psp")
@@ -220,6 +317,7 @@ position = Vector2(1514, 1041)
 rotation = -0.68156
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Section4/StaticBody2D6"]
+material = SubResource("ShaderMaterial_lodgl")
 position = Vector2(63.6664, 65.6545)
 rotation = -0.754405
 shape = SubResource("RectangleShape2D_2aael")
@@ -228,11 +326,13 @@ shape = SubResource("RectangleShape2D_2aael")
 position = Vector2(1302, 1176)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Section4/StaticBody2D4"]
+material = SubResource("ShaderMaterial_jm8el")
 position = Vector2(103, 30)
 rotation = -1.27
 shape = SubResource("RectangleShape2D_k42pa")
 
 [node name="Node2D" parent="Section4" instance=ExtResource("4_i6ia0")]
+material = SubResource("ShaderMaterial_yui5q")
 position = Vector2(1622, 1253)
 
 [editable path="Section3/AnimatableBody2D"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://pjhqypun8xd6"]
+[gd_scene load_steps=12 format=3 uid="uid://pjhqypun8xd6"]
 
 [ext_resource type="Script" path="res://scripts/CircleDeLoop.gd" id="1_c6jyc"]
 [ext_resource type="Script" path="res://scripts/PlayerDetector.gd" id="2_d2yor"]
+[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://gui/color.tres" id="3_ue7a8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d74q5"]
 radius = 73.0069
@@ -13,6 +14,69 @@ height = 54.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ungif"]
 radius = 4.10547
 height = 34.8208
+
+[sub_resource type="Animation" id="Animation_cq6a5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody2D8:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaticBody2D8:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StaticBody2D9:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StaticBody2D9:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("StaticBody2D8/CollisionShape2D:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.57079]
+}
 
 [sub_resource type="Animation" id="Animation_qj1gq"]
 resource_name = "rotate1"
@@ -79,74 +143,14 @@ tracks/4/keys = {
 "values": [-1.57079]
 }
 
-[sub_resource type="Animation" id="Animation_cq6a5"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("StaticBody2D8:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("StaticBody2D8:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("StaticBody2D9:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("StaticBody2D9:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("StaticBody2D8/CollisionShape2D:rotation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-1.57079]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1bjp5"]
 _data = {
 "RESET": SubResource("Animation_cq6a5"),
 "rotate1": SubResource("Animation_qj1gq")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o1aog"]
+shader = ExtResource("3_ue7a8")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nex32"]
 size = Vector2(33, 21)
@@ -192,6 +196,7 @@ play_animation = NodePath("../AnimationPlayer")
 animation_name = "rotate1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
+material = SubResource("ShaderMaterial_o1aog")
 position = Vector2(-85, -7)
 shape = SubResource("RectangleShape2D_nex32")
 debug_color = Color(0.690196, 0, 0.647059, 0.419608)

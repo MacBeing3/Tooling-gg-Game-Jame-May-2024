@@ -1,54 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://byobw8ce0aplh"]
+[gd_scene load_steps=4 format=3 uid="uid://byobw8ce0aplh"]
 
 [ext_resource type="Theme" uid="uid://d15rsb5jyxtgp" path="res://gui/default_theme.tres" id="1_q2hyr"]
+[ext_resource type="Texture2D" uid="uid://yys88ln3ehwe" path="res://gui/black.png" id="2_imeka"]
 
 [sub_resource type="GDScript" id="GDScript_mnglq"]
 script/source = "extends Control
 
-const LEVEL_BTN = preload(\"res://gui/lvl_btn.tscn\")
-@export_dir var dir_path
-
-@onready var grid = $MarginContainer/VBoxContainer/GridContainer
-
-func _ready() -> void:
-	get_levels(dir_path)
-
-func get_levels(path):
-	var dir := DirAccess.open(path)
-	if dir:
-		dir.list_dir_begin()
-		var file_name = dir.get_next()
-		while file_name != \"\":
-			print(file_name)
-			create_level_btn('%s/%s' % [dir.get_current_dir(), file_name], file_name)
-			file_name = dir.get_next()
-		dir.list_dir_end()
-	else:
-		print(\"An error occurred when trying to access the path.\")
-		
-		
-func create_level_btn(lvl_path, lvl_name):
-	var btn = LEVEL_BTN.instantiate()
-	btn.text = lvl_name.trim_suffix('.tscn').replace(\"_\", \" \")
-	btn.level_path = lvl_path
-	grid.add_child(btn)
 
 
 func _on_button_pressed():
 	Transitions.transition()
 	await Transitions.on_transition_finished
 	get_tree().change_scene_to_file(\"res://gui/menu.tscn\")
+
+
+func _on_level_0_pressed():
+	Transitions.transition()
+	await Transitions.on_transition_finished
+	get_tree().change_scene_to_file(\"res://levels/level_0.tscn\")
 "
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sis0k"]
-bg_color = Color(0.810729, 0.396266, 0.91066, 1)
-
-[sub_resource type="Theme" id="Theme_js0a5"]
-GridContainer/colors/ll = Color(0.903519, 0.000385239, 0.844806, 1)
-GridContainer/constants/h_separation = 4
-GridContainer/constants/v_separation = 4
-GridContainer/icons/image = null
-GridContainer/styles/color = SubResource("StyleBoxFlat_sis0k")
 
 [node name="LevelSelectScreen" type="Control"]
 layout_mode = 3
@@ -59,53 +29,31 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_q2hyr")
 script = SubResource("GDScript_mnglq")
-dir_path = "res://levels"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(0.634368, 0.933688, 1, 1)
 layout_mode = 0
-offset_right = 1275.0
-offset_bottom = 723.0
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -163.0
-offset_top = -72.0
-offset_right = 163.0
-offset_bottom = 72.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 32
-theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 32
-theme_override_constants/margin_bottom = 24
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-theme_override_constants/separation = 32
-
-[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme = SubResource("Theme_js0a5")
-theme_override_constants/h_separation = 16
-theme_override_constants/v_separation = 16
-columns = 3
+offset_left = -4.0
+offset_top = 4.0
+offset_right = 1157.0
+offset_bottom = 647.0
+texture = ExtResource("2_imeka")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 29.0
-offset_top = 35.0
-offset_right = 133.0
-offset_bottom = 117.0
-text = "Back"
+offset_left = 23.0
+offset_top = 31.0
+offset_right = 208.0
+offset_bottom = 171.0
+scale = Vector2(0.246191, 0.265292)
+
+[node name="Level_0" type="Button" parent="."]
+layout_mode = 2
+offset_left = 210.0
+offset_top = 191.0
+offset_right = 339.0
+offset_bottom = 273.0
+text = "Level 0"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Level_0" to="." method="_on_level_0_pressed"]
