@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://cvx6jp57mgede"]
+
+[ext_resource type="Script" path="res://scripts/Tunnel.gd" id="1_3s08l"]
+[ext_resource type="Texture2D" uid="uid://dq7foj2p0me8k" path="res://assets/white.png" id="2_0r1op"]
+[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://gui/color.tres" id="2_gexmy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_55kih"]
+size = Vector2(400.504, 20)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4uth6"]
+shader = ExtResource("2_gexmy")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_077rt"]
+size = Vector2(400.504, 20)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lqb7g"]
+shader = ExtResource("2_gexmy")
+
+[node name="Tunnel" type="Node2D"]
+script = ExtResource("1_3s08l")
+
+[node name="BottomBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-7.43866e-05, -3.05176e-05)
+rotation = 0.436332
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomBody2D"]
+shape = SubResource("RectangleShape2D_55kih")
+
+[node name="Sprite2D" type="Sprite2D" parent="BottomBody2D"]
+material = SubResource("ShaderMaterial_4uth6")
+position = Vector2(0.189029, 0.28545)
+scale = Vector2(8.3454, 0.418706)
+texture = ExtResource("2_0r1op")
+
+[node name="TopBody2D" type="StaticBody2D" parent="."]
+position = Vector2(23, -42)
+rotation = 0.436332
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TopBody2D"]
+shape = SubResource("RectangleShape2D_077rt")
+
+[node name="Sprite2D" type="Sprite2D" parent="TopBody2D/CollisionShape2D"]
+material = SubResource("ShaderMaterial_lqb7g")
+position = Vector2(0.189029, 0.28545)
+scale = Vector2(8.3454, 0.418706)
+texture = ExtResource("2_0r1op")

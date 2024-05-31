@@ -17,7 +17,8 @@ var node_attached_to:Node2D
 var current_size: int = 1
 
 func _ready():
-	global_position = starting_point.global_position
+	if starting_point:
+		global_position = starting_point.global_position
 
 func _process(delta):
 	if is_attached:
@@ -40,7 +41,7 @@ func _physics_process(delta):
 			sprite_2d.set_scale(Vector2(1,1))
 		
 		size.big:
-			collision_shape_2d.set_scale(Vector2(1.25,1.25))
+			collision_shape_2d.set_scale(Vector2(1.75,1.75))
 			sprite_2d.set_scale(Vector2(1.75,1.75))
 		
 		

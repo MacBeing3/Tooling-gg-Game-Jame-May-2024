@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqx8bo12ohbto"]
+
+[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://gui/color.tres" id="1_a4mtc"]
+[ext_resource type="Texture2D" uid="uid://dq7foj2p0me8k" path="res://assets/white.png" id="1_r1meq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bj7nd"]
+shader = ExtResource("1_a4mtc")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ba03"]
+size = Vector2(48, 48)
+
+[node name="TrackPiece" type="Sprite2D"]
+material = SubResource("ShaderMaterial_bj7nd")
+texture = ExtResource("1_r1meq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(24, 24)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-24, -24)
+shape = SubResource("RectangleShape2D_8ba03")
