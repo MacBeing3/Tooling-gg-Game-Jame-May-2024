@@ -107,9 +107,9 @@ shader = ExtResource("3_fdx2s")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -596.0
-offset_top = -116.0
+offset_top = -112.0
 offset_right = 6300.0
-offset_bottom = 4844.0
+offset_bottom = 4848.0
 scale = Vector2(158.248, 80.3875)
 texture = ExtResource("6_v05fr")
 
