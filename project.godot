@@ -13,11 +13,17 @@ config_version=5
 config/name="Marble Game Tooling-gg Game Jam"
 run/main_scene="res://gui/menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
+run/max_fps=60
 config/icon="res://icon.svg"
 
 [autoload]
 
 Transitions="*res://gui/transitions.tscn"
+
+[display]
+
+window/size/mode=3
+window/stretch/mode="canvas_items"
 
 [input]
 
@@ -45,5 +51,6 @@ Restart={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
