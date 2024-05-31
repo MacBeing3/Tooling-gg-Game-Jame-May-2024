@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://scripts/FollowCamera.gd" id="1_bbp4u"]
 [ext_resource type="PackedScene" uid="uid://c3pl2mg6e4rol" path="res://scenes/Pinball.tscn" id="3_1f1ho"]
 [ext_resource type="Shader" uid="uid://dygv11racet0" path="res://color.tres" id="3_fdx2s"]
+[ext_resource type="PackedScene" uid="uid://cvx6jp57mgede" path="res://scenes/tunnel.tscn" id="4_6ih0i"]
 [ext_resource type="PackedScene" uid="uid://pjhqypun8xd6" path="res://scenes/CircleDeLoop.tscn" id="4_i6ia0"]
 [ext_resource type="Texture2D" uid="uid://yys88ln3ehwe" path="res://gui/black.png" id="6_v05fr"]
 
@@ -12,9 +13,6 @@ shader = ExtResource("3_fdx2s")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f1rvn"]
 size = Vector2(400.504, 20)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_u8gxv"]
-shader = ExtResource("3_fdx2s")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vq4in"]
 shader = ExtResource("3_fdx2s")
@@ -105,7 +103,10 @@ shader = ExtResource("3_fdx2s")
 
 [node name="Level0" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -100
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 offset_left = -596.0
 offset_top = -121.0
 offset_right = 6300.0
@@ -117,7 +118,7 @@ script = ExtResource("1_bbp4u")
 main_marble = NodePath("../Marble")
 
 [node name="StartingPoint" type="Node2D" parent="."]
-position = Vector2(236, 52)
+position = Vector2(244, 134)
 
 [node name="Marble" parent="." node_paths=PackedStringArray("starting_point") instance=ExtResource("1_6u6cr")]
 position = Vector2(238, 52)
@@ -126,19 +127,15 @@ starting_point = NodePath("../StartingPoint")
 
 [node name="section 1" type="Node2D" parent="."]
 
+[node name="Tunnel" parent="section 1" instance=ExtResource("4_6ih0i")]
+position = Vector2(450, 261)
+tunnel_size = 1
+
 [node name="StaticBody2D" type="StaticBody2D" parent="section 1"]
-position = Vector2(393, 248)
+position = Vector2(276, 177)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="section 1/StaticBody2D"]
 material = SubResource("ShaderMaterial_t54ht")
-rotation = 0.45057
-shape = SubResource("RectangleShape2D_f1rvn")
-
-[node name="StaticBody2D5" type="StaticBody2D" parent="section 1"]
-position = Vector2(488, 194)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="section 1/StaticBody2D5"]
-material = SubResource("ShaderMaterial_u8gxv")
 rotation = 0.45057
 shape = SubResource("RectangleShape2D_f1rvn")
 
