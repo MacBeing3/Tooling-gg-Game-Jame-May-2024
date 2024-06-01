@@ -1,0 +1,106 @@
+[gd_scene load_steps=10 format=3 uid="uid://buobecys81tb5"]
+
+[ext_resource type="PackedScene" path="res://scenes/TrackPiece.tscn" id="1_k0s2x"]
+[ext_resource type="PackedScene" path="res://scenes/tunnel.tscn" id="2_r6yfw"]
+[ext_resource type="PackedScene" uid="uid://c3pl2mg6e4rol" path="res://scenes/Pinball.tscn" id="3_lupcg"]
+[ext_resource type="PackedScene" uid="uid://pjhqypun8xd6" path="res://scenes/CircleDeLoop.tscn" id="4_8vvwt"]
+[ext_resource type="Texture2D" uid="uid://yys88ln3ehwe" path="res://gui/black.png" id="5_b0tvw"]
+[ext_resource type="PackedScene" uid="uid://c28mwy6ote8d" path="res://scenes/marble.tscn" id="6_sk8lg"]
+[ext_resource type="Script" path="res://scripts/FollowCamera.gd" id="7_ats6y"]
+[ext_resource type="PackedScene" uid="uid://be8yj036jb8lr" path="res://scenes/deathzone.tscn" id="8_6yadn"]
+[ext_resource type="PackedScene" uid="uid://csdfpxcxl35o1" path="res://scenes/star.tscn" id="9_f4mex"]
+
+[node name="LevelTemplate" type="Node2D"]
+
+[node name="All Pieces" type="CanvasLayer" parent="."]
+process_mode = 4
+layer = 0
+
+[node name="TrackPiece" parent="All Pieces" instance=ExtResource("1_k0s2x")]
+position = Vector2(-462, -161)
+
+[node name="Tunnel" parent="All Pieces" instance=ExtResource("2_r6yfw")]
+position = Vector2(-389, 131)
+
+[node name="Pinball" parent="All Pieces" instance=ExtResource("3_lupcg")]
+position = Vector2(-437, 414)
+
+[node name="CircleDeLoop" parent="All Pieces" instance=ExtResource("4_8vvwt")]
+position = Vector2(-467, 624)
+
+[node name="Required" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Required"]
+layer = -5
+
+[node name="TextureRect" type="TextureRect" parent="Required/CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4911.0
+offset_top = -3979.0
+offset_right = 7921.0
+offset_bottom = 5301.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_b0tvw")
+
+[node name="StartingPoint" type="Node2D" parent="Required"]
+position = Vector2(115, 68)
+
+[node name="Marble" parent="Required" node_paths=PackedStringArray("starting_point") instance=ExtResource("6_sk8lg")]
+position = Vector2(76, -64)
+collision_mask = 7
+starting_point = NodePath("../StartingPoint")
+
+[node name="Camera2D" type="Camera2D" parent="Required" node_paths=PackedStringArray("main_marble")]
+script = ExtResource("7_ats6y")
+main_marble = NodePath("../Marble")
+
+[node name="Level_" type="Node2D" parent="."]
+
+[node name="TrackPiece5" parent="Level_" instance=ExtResource("1_k0s2x")]
+position = Vector2(-637, -203)
+
+[node name="TrackPiece3" parent="Level_" instance=ExtResource("1_k0s2x")]
+position = Vector2(407, 686)
+rotation = -2.5474
+scale = Vector2(4.16778, 0.384422)
+
+[node name="TrackPiece4" parent="Level_" instance=ExtResource("1_k0s2x")]
+position = Vector2(625, 825)
+rotation = -2.58725
+scale = Vector2(-2.68414, -0.378299)
+
+[node name="TrackPiece6" parent="Level_" instance=ExtResource("1_k0s2x")]
+position = Vector2(815, 966)
+rotation = -2.58725
+scale = Vector2(-2.68414, -0.378299)
+
+[node name="Tunnel3" parent="Level_" instance=ExtResource("2_r6yfw")]
+position = Vector2(-463, 958)
+rotation = 1.1341
+tunnel_size = 1
+
+[node name="Tunnel2" parent="Level_" instance=ExtResource("2_r6yfw")]
+position = Vector2(-471, 1405)
+rotation = 1.13575
+
+[node name="CircleDeLoop2" parent="Level_" instance=ExtResource("4_8vvwt")]
+position = Vector2(213, 243)
+
+[node name="CircleDeLoop3" parent="Level_" instance=ExtResource("4_8vvwt")]
+position = Vector2(250, 573)
+rotation = 0.441852
+
+[node name="TrackPiece2" parent="Level_" instance=ExtResource("1_k0s2x")]
+position = Vector2(409, 387)
+rotation = 2.33953
+scale = Vector2(5.16667, 0.513482)
+
+[node name="Deathzone" parent="." instance=ExtResource("8_6yadn")]
+position = Vector2(1, 2202)
+scale = Vector2(2.81524, 0.798762)
+
+[node name="Star" parent="." instance=ExtResource("9_f4mex")]
+position = Vector2(806, 1194)

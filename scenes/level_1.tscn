@@ -2,9 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://yys88ln3ehwe" path="res://gui/black.png" id="1_5inhf"]
 [ext_resource type="PackedScene" uid="uid://c28mwy6ote8d" path="res://scenes/marble.tscn" id="1_i55d4"]
-[ext_resource type="PackedScene" uid="uid://bmu6860l1dwqx" path="res://scenes/TrackPiece.tscn" id="2_epdon"]
+[ext_resource type="PackedScene" path="res://scenes/TrackPiece.tscn" id="2_epdon"]
 [ext_resource type="Script" path="res://scripts/FollowCamera.gd" id="2_ucf2l"]
-[ext_resource type="PackedScene" uid="uid://cvx6jp57mgede" path="res://scenes/tunnel.tscn" id="3_hn4ee"]
+[ext_resource type="PackedScene" path="res://scenes/tunnel.tscn" id="3_hn4ee"]
+
 [ext_resource type="PackedScene" uid="uid://c3pl2mg6e4rol" path="res://scenes/Pinball.tscn" id="4_7ogkb"]
 [ext_resource type="PackedScene" uid="uid://pjhqypun8xd6" path="res://scenes/CircleDeLoop.tscn" id="5_3n1os"]
 
