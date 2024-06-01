@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bbk6u2ss8bt82"]
+[gd_scene load_steps=5 format=3 uid="uid://bbk6u2ss8bt82"]
 
 [ext_resource type="Texture2D" uid="uid://dq7foj2p0me8k" path="res://assets/white.png" id="1_kd1r4"]
 [ext_resource type="Shader" uid="uid://dygv11racet0" path="res://color.tres" id="1_tj0te"]
-[ext_resource type="PackedScene" uid="uid://h4vlbnirou3m" path="res://scenes/star.tscn" id="3_4samb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_e805l"]
 shader = ExtResource("1_tj0te")
@@ -40,6 +39,3 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(1.53591, -4.76921)
 shape = SubResource("RectangleShape2D_aejjy")
 debug_color = Color(0, 0.6, 0.701961, 0)
-
-[node name="Star" parent="." instance=ExtResource("3_4samb")]
-position = Vector2(152, -74)
