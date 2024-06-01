@@ -36,21 +36,14 @@ func _physics_process(delta):
 		size.small: 
 			collision_shape_2d.set_scale(Vector2(0.5,0.5))
 			sprite_2d.set_scale(Vector2(0.5,0.5))
-			sprite_2d.frame = 0
 		size.normal: 
 			collision_shape_2d.set_scale(Vector2(1,1))
-			sprite_2d.set_scale(Vector2(0.5,0.5))
-			sprite_2d.frame = 1
+			sprite_2d.set_scale(Vector2(1,1))
+		
 		size.big:
-<<<<<<< Updated upstream
 			collision_shape_2d.set_scale(Vector2(1.75,1.75))
 			sprite_2d.set_scale(Vector2(1.75,1.75))
 		
-=======
-			collision_shape_2d.set_scale(Vector2(1.25,1.25))
-			sprite_2d.set_scale(Vector2(0.5,0.5))
-			sprite_2d.frame = 2
->>>>>>> Stashed changes
 		
 #	if is_attached:
 #		freeze
@@ -82,9 +75,3 @@ func _reset_level():
 		angular_velocity = 0
 		current_size = size.normal
 
-
-
-func _on_body_entered(body):
-	pass # Replace with function body.
-	
-	#play marble contact sound
