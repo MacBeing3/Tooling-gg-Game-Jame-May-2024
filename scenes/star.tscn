@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://csdfpxcxl35o1"]
 
 [ext_resource type="Script" path="res://scenes/star.gd" id="1_ldesb"]
-[ext_resource type="Texture2D" path="res://assets/1717200983192.png" id="1_n7tuv"]
-[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://gui/color.tres" id="2_bi3h6"]
+[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://color.tres" id="2_bi3h6"]
+[ext_resource type="Texture2D" path="res://assets/1717200983192.png" id="3_1kx0t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ba75u"]
 size = Vector2(20.1445, 98.4274)
@@ -24,4 +24,4 @@ debug_color = Color(0, 0.6, 0.701961, 0)
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_mbv7e")
 position = Vector2(183, 143)
-texture = ExtResource("1_n7tuv")
+texture = ExtResource("3_1kx0t")
