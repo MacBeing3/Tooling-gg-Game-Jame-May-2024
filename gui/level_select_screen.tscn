@@ -25,7 +25,7 @@ func _on_level_01_pressed():
 func _on_level_02_pressed():
 	Transitions.transition()
 	await Transitions.on_transition_finished
-	get_tree().change_scene_to_file(\"res://levels/level_01.tscn\")
+	get_tree().change_scene_to_file(\"res://levels/level_01.tscn\") #change the path
 
 "
 
@@ -76,7 +76,7 @@ offset_left = 384.0
 offset_top = 161.0
 offset_right = 597.0
 offset_bottom = 243.0
-text = "Level 01
+text = "Level 02
 "
 flat = true
 
