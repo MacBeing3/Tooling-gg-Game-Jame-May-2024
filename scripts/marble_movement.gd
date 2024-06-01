@@ -17,7 +17,7 @@ var node_attached_to:Node2D
 var current_size: int = 1
 
 func _ready():
-	global_position = starting_point.global_position
+		global_position = starting_point.global_position
 
 func _process(delta):
 	if is_attached:

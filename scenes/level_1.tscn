@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://byva7qsjueo4t"]
+
+[ext_resource type="Texture2D" uid="uid://yys88ln3ehwe" path="res://gui/black.png" id="1_5inhf"]
+[ext_resource type="PackedScene" uid="uid://c28mwy6ote8d" path="res://scenes/marble.tscn" id="1_i55d4"]
+[ext_resource type="PackedScene" path="res://scenes/TrackPiece.tscn" id="2_epdon"]
+[ext_resource type="Script" path="res://scripts/FollowCamera.gd" id="2_ucf2l"]
+[ext_resource type="PackedScene" path="res://scenes/tunnel.tscn" id="3_hn4ee"]
+[ext_resource type="PackedScene" uid="uid://c3pl2mg6e4rol" path="res://scenes/Pinball.tscn" id="4_7ogkb"]
+[ext_resource type="PackedScene" uid="uid://pjhqypun8xd6" path="res://scenes/CircleDeLoop.tscn" id="5_3n1os"]
+
+[node name="LevelTemplate" type="Node2D"]
+
+[node name="All Pieces" type="CanvasLayer" parent="."]
+process_mode = 4
+layer = -1
+
+[node name="TrackPiece" parent="All Pieces" instance=ExtResource("2_epdon")]
+position = Vector2(-462, -161)
+
+[node name="Tunnel" parent="All Pieces" instance=ExtResource("3_hn4ee")]
+position = Vector2(-389, 131)
+
+[node name="Pinball" parent="All Pieces" instance=ExtResource("4_7ogkb")]
+position = Vector2(-437, 414)
+
+[node name="CircleDeLoop" parent="All Pieces" instance=ExtResource("5_3n1os")]
+position = Vector2(-467, 624)
+
+[node name="Required" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Required"]
+layer = -5
+
+[node name="TextureRect" type="TextureRect" parent="Required/CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5inhf")
+
+[node name="StartingPoint" type="Node2D" parent="Required"]
+position = Vector2(115, 68)
+
+[node name="Marble" parent="Required" instance=ExtResource("1_i55d4")]
+collision_mask = 7
+
+[node name="Camera2D" type="Camera2D" parent="Required" node_paths=PackedStringArray("main_marble")]
+script = ExtResource("2_ucf2l")
+main_marble = NodePath("../Marble")
+
+[node name="Level_" type="Node2D" parent="."]
+
+[node name="CircleDeLoop2" parent="Level_" instance=ExtResource("5_3n1os")]
+position = Vector2(425, 314)
+
+[node name="TrackPiece2" parent="Level_" instance=ExtResource("2_epdon")]
+position = Vector2(193.496, 258.412)
+rotation = 0.385424
+scale = Vector2(5.16667, 0.804274)
