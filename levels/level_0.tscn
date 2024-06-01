@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c28mwy6ote8d" path="res://scenes/marble.tscn" id="1_6u6cr"]
 [ext_resource type="Script" path="res://scripts/FollowCamera.gd" id="1_bbp4u"]
 [ext_resource type="PackedScene" uid="uid://c3pl2mg6e4rol" path="res://scenes/Pinball.tscn" id="3_1f1ho"]
-[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://color.tres" id="3_fdx2s"]
+[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://gui/color.tres" id="3_fdx2s"]
 [ext_resource type="PackedScene" uid="uid://pjhqypun8xd6" path="res://scenes/CircleDeLoop.tscn" id="4_i6ia0"]
 [ext_resource type="Texture2D" uid="uid://yys88ln3ehwe" path="res://gui/black.png" id="6_v05fr"]
 [ext_resource type="PackedScene" uid="uid://be8yj036jb8lr" path="res://scenes/deathzone.tscn" id="7_mtws0"]
@@ -104,7 +104,7 @@ shader = ExtResource("3_fdx2s")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yui5q"]
 shader = ExtResource("3_fdx2s")
 
-[node name="Level0" type="Node2D"]
+[node name="Level1" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -1264.0
