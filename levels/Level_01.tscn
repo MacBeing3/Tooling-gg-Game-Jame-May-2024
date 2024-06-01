@@ -203,8 +203,3 @@ scale = Vector2(0.0794382, 0.706305)
 position = Vector2(1022, 434)
 rotation = 3.15119
 scale = Vector2(0.157151, 0.511794)
-
-[node name="Win2" parent="Level_" instance=ExtResource("1_wulub")]
-position = Vector2(930, 2724)
-
-[node name="Star" parent="Level_/Win2" instance=ExtResource("2_8y6hw")]
