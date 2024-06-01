@@ -1,6 +1,6 @@
 [gd_scene load_steps=40 format=3 uid="uid://ct0kfg26tckfs"]
 
-[ext_resource type="PackedScene" uid="uid://35qdlbfgk4ix" path="res://background.tscn" id="1_4yea0"]
+[ext_resource type="PackedScene" uid="uid://35qdlbfgk4ix" path="res://gui/background.tscn" id="1_4yea0"]
 [ext_resource type="PackedScene" uid="uid://c28mwy6ote8d" path="res://scenes/marble.tscn" id="1_6u6cr"]
 [ext_resource type="Script" path="res://scripts/FollowCamera.gd" id="1_bbp4u"]
 [ext_resource type="PackedScene" uid="uid://c3pl2mg6e4rol" path="res://scenes/Pinball.tscn" id="3_1f1ho"]

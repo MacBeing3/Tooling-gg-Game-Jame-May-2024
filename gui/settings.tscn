@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://rirfl8pl2m1h"]
+[gd_scene load_steps=4 format=3 uid="uid://rirfl8pl2m1h"]
 
+[ext_resource type="Theme" uid="uid://d15rsb5jyxtgp" path="res://gui/default_theme.tres" id="1_2mr2k"]
 [ext_resource type="Script" path="res://gui/settings.gd" id="1_o2bji"]
+[ext_resource type="Texture2D" uid="uid://c6okx3j6t305u" path="res://gui/stars background (2).png" id="2_b7qfu"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -9,7 +11,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_2mr2k")
 script = ExtResource("1_o2bji")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_b7qfu")
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://byobw8ce0aplh"]
 
 [ext_resource type="Theme" uid="uid://d15rsb5jyxtgp" path="res://gui/default_theme.tres" id="1_q2hyr"]
-[ext_resource type="Texture2D" uid="uid://dlxlprpjop8pv" path="res://gui/stars background (1).png" id="2_gxmt7"]
+[ext_resource type="Texture2D" path="res://gui/stars background (1).png" id="2_gxmt7"]
 [ext_resource type="Shader" uid="uid://dygv11racet0" path="res://gui/color.tres" id="3_ivlh4"]
 
 [sub_resource type="GDScript" id="GDScript_mnglq"]

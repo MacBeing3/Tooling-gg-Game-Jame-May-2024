@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://chc6h2cb3wlls"]
 
 [ext_resource type="Script" path="res://gui/menu.gd" id="1_dej3l"]
-[ext_resource type="PackedScene" uid="uid://35qdlbfgk4ix" path="res://background.tscn" id="2_amjt4"]
+[ext_resource type="PackedScene" uid="uid://35qdlbfgk4ix" path="res://gui/background.tscn" id="2_amjt4"]
 [ext_resource type="Theme" uid="uid://d15rsb5jyxtgp" path="res://gui/default_theme.tres" id="3_7y4ik"]
-[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://gui/color.tres" id="3_cohok"]
+[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://color.tres" id="3_cohok"]
 [ext_resource type="Texture2D" uid="uid://c20rtw3jyx5n5" path="res://assets/settings-icon-2048x2046-cw28eevx.png" id="3_m0ge5"]
-[ext_resource type="FontFile" uid="uid://vo8qle1pdt0x" path="res://gui/04B_30__.TTF" id="4_a86d7"]
+[ext_resource type="FontFile" path="res://gui/04B_30__.TTF" id="4_a86d7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2eorn"]
 shader = ExtResource("3_cohok")

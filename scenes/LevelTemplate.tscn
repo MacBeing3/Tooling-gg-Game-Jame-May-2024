@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cvx6jp57mgede" path="res://scenes/tunnel.tscn" id="2_flqs1"]
 [ext_resource type="PackedScene" uid="uid://c3pl2mg6e4rol" path="res://scenes/Pinball.tscn" id="3_eaqme"]
 [ext_resource type="PackedScene" uid="uid://pjhqypun8xd6" path="res://scenes/CircleDeLoop.tscn" id="4_0tsly"]
-[ext_resource type="PackedScene" uid="uid://35qdlbfgk4ix" path="res://background.tscn" id="5_7745b"]
+[ext_resource type="PackedScene" uid="uid://35qdlbfgk4ix" path="res://gui/background.tscn" id="5_7745b"]
 [ext_resource type="PackedScene" uid="uid://c28mwy6ote8d" path="res://scenes/marble.tscn" id="6_o5ede"]
 [ext_resource type="Script" path="res://scripts/FollowCamera.gd" id="7_aya2k"]
 
