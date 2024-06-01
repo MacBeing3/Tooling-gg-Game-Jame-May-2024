@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://gui/menu.gd" id="1_dej3l"]
 [ext_resource type="Texture2D" uid="uid://yys88ln3ehwe" path="res://gui/black.png" id="2_jyo3v"]
 [ext_resource type="Theme" uid="uid://d15rsb5jyxtgp" path="res://gui/default_theme.tres" id="3_7y4ik"]
-[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://color.tres" id="3_cohok"]
+[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://gui/color.tres" id="3_cohok"]
 [ext_resource type="Texture2D" uid="uid://c20rtw3jyx5n5" path="res://assets/settings-icon-2048x2046-cw28eevx.png" id="3_m0ge5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2eorn"]
