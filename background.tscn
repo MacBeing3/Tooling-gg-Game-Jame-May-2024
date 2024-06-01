@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://35qdlbfgk4ix"]
+
+[ext_resource type="Texture2D" uid="uid://u2vxj15dpruk" path="res://gui/stars background.png" id="1_78y6e"]
+[ext_resource type="Texture2D" uid="uid://c6okx3j6t305u" path="res://gui/stars background (2).png" id="2_1aevj"]
+[ext_resource type="Texture2D" uid="uid://dypyq8ywv4hpo" path="res://gui/stars background (3).png" id="3_j36l8"]
+
+[node name="Background" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -5360.0
+offset_top = -4393.0
+offset_right = 9942.0
+offset_bottom = 3413.0
+texture = ExtResource("1_78y6e")
+stretch_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = -5367.0
+offset_top = 567.0
+offset_right = 9935.0
+offset_bottom = 8373.0
+texture = ExtResource("2_1aevj")
+stretch_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+offset_left = 969.0
+offset_top = 663.0
+offset_right = 16271.0
+offset_bottom = 8469.0
+texture = ExtResource("3_j36l8")
+stretch_mode = 1
