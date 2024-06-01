@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://chc6h2cb3wlls"]
+[gd_scene load_steps=8 format=3 uid="uid://chc6h2cb3wlls"]
 
 [ext_resource type="Script" path="res://gui/menu.gd" id="1_dej3l"]
-[ext_resource type="Texture2D" uid="uid://yys88ln3ehwe" path="res://gui/black.png" id="2_jyo3v"]
+[ext_resource type="PackedScene" path="res://gui/background.tscn" id="2_amjt4"]
 [ext_resource type="Theme" uid="uid://d15rsb5jyxtgp" path="res://gui/default_theme.tres" id="3_7y4ik"]
 [ext_resource type="Shader" uid="uid://dygv11racet0" path="res://color.tres" id="3_cohok"]
 [ext_resource type="Texture2D" uid="uid://c20rtw3jyx5n5" path="res://assets/settings-icon-2048x2046-cw28eevx.png" id="3_m0ge5"]
+[ext_resource type="FontFile" path="res://gui/04B_30__.TTF" id="4_a86d7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2eorn"]
 shader = ExtResource("3_cohok")
@@ -16,17 +17,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_7y4ik")
 script = ExtResource("1_dej3l")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.583
-offset_left = -128.384
-offset_top = -672.0
-offset_right = 1855.0
-offset_bottom = 1199.0
-texture = ExtResource("2_jyo3v")
+[node name="Background" parent="." instance=ExtResource("2_amjt4")]
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -48,18 +42,21 @@ size_flags_vertical = 8
 [node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
 material = SubResource("ShaderMaterial_2eorn")
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_a86d7")
 text = "Play"
+flat = true
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_a86d7")
 text = "Quit"
 
 [node name="Options" type="Button" parent="."]
 layout_mode = 2
-offset_left = 969.0
-offset_top = 483.0
-offset_right = 1130.0
-offset_bottom = 635.0
+offset_left = 1001.0
+offset_top = 505.0
+offset_right = 1151.0
+offset_bottom = 637.0
 theme = ExtResource("3_7y4ik")
 icon = ExtResource("3_m0ge5")
 flat = true

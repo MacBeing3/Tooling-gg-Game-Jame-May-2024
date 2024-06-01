@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://buobecys81tb5"]
+[gd_scene load_steps=10 format=3 uid="uid://b6cto523r878v"]
 
 [ext_resource type="PackedScene" uid="uid://bmu6860l1dwqx" path="res://scenes/TrackPiece.tscn" id="1_k0s2x"]
 [ext_resource type="PackedScene" uid="uid://cvx6jp57mgede" path="res://scenes/tunnel.tscn" id="2_r6yfw"]
@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c28mwy6ote8d" path="res://scenes/marble.tscn" id="6_sk8lg"]
 [ext_resource type="Script" path="res://scripts/FollowCamera.gd" id="7_ats6y"]
 [ext_resource type="PackedScene" uid="uid://be8yj036jb8lr" path="res://scenes/deathzone.tscn" id="8_6yadn"]
-[ext_resource type="PackedScene" uid="uid://csdfpxcxl35o1" path="res://scenes/star.tscn" id="9_f4mex"]
+[ext_resource type="PackedScene" path="res://scenes/star.tscn" id="9_f4mex"]
 
 [node name="LevelTemplate" type="Node2D"]
 
