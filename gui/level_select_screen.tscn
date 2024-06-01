@@ -18,6 +18,14 @@ func _on_level_0_pressed():
 	Transitions.transition()
 	await Transitions.on_transition_finished
 	get_tree().change_scene_to_file(\"res://levels/level_0.tscn\")
+
+
+func _on_level_00_pressed():
+	Transitions.transition()
+	await Transitions.on_transition_finished
+	get_tree().change_scene_to_file(\"res://levels/level00.tscn\")
+
+
 "
 
 [node name="LevelSelectScreen" type="Control"]
@@ -33,10 +41,10 @@ script = SubResource("GDScript_mnglq")
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(0.634368, 0.933688, 1, 1)
 layout_mode = 0
-offset_left = -4.0
-offset_top = 4.0
-offset_right = 1157.0
-offset_bottom = 647.0
+offset_left = -46.0
+offset_top = -36.0
+offset_right = 1197.0
+offset_bottom = 692.0
 texture = ExtResource("2_imeka")
 
 [node name="Button" type="Button" parent="."]
@@ -55,5 +63,14 @@ offset_right = 339.0
 offset_bottom = 273.0
 text = "Level 0"
 
+[node name="Level_00" type="Button" parent="."]
+layout_mode = 2
+offset_left = 398.0
+offset_top = 192.0
+offset_right = 541.0
+offset_bottom = 274.0
+text = "Level 00"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Level_0" to="." method="_on_level_0_pressed"]
+[connection signal="pressed" from="Level_00" to="." method="_on_level_00_pressed"]
