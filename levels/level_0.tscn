@@ -263,7 +263,7 @@ position = Vector2(596, 1013)
 
 [node name="StaticBody2D4" type="CollisionPolygon2D" parent="Section3/StaticBody2D5"]
 material = SubResource("ShaderMaterial_fvrup")
-position = Vector2(-21, -291.75)
+position = Vector2(-21, -292)
 scale = Vector2(3.71875, 4.85938)
 polygon = PackedVector2Array(-10, 10, -5, 0, -0.268906, -4.99036, 7, -8, 10, -8, 10, -10, -10, -10)
 

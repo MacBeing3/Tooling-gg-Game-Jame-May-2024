@@ -1,7 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://pjhqypun8xd6"]
+[gd_scene load_steps=17 format=3 uid="uid://pjhqypun8xd6"]
 
 [ext_resource type="Script" path="res://scripts/CircleDeLoop.gd" id="1_c6jyc"]
-[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://gui/color.tres" id="2_1vliy"]
 [ext_resource type="Script" path="res://scripts/PlayerDetector.gd" id="2_d2yor"]
 [ext_resource type="Shader" uid="uid://dygv11racet0" path="res://color.tres" id="3_ue7a8"]
 
@@ -9,27 +8,27 @@
 radius = 73.0069
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ja4q0"]
-shader = ExtResource("2_1vliy")
+shader = ExtResource("3_ue7a8")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ayu0"]
 radius = 8.0
 height = 54.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r1wsp"]
-shader = ExtResource("2_1vliy")
+shader = ExtResource("3_ue7a8")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jyldj"]
-shader = ExtResource("2_1vliy")
+shader = ExtResource("3_ue7a8")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ungif"]
 radius = 4.10547
 height = 34.8208
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xnqml"]
-shader = ExtResource("2_1vliy")
+shader = ExtResource("3_ue7a8")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7l0v0"]
-shader = ExtResource("2_1vliy")
+shader = ExtResource("3_ue7a8")
 
 [sub_resource type="Animation" id="Animation_cq6a5"]
 length = 0.001
