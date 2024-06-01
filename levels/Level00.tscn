@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://b6cto523r878v"]
 
-[ext_resource type="PackedScene" uid="uid://bmu6860l1dwqx" path="res://scenes/TrackPiece.tscn" id="1_k0s2x"]
+[ext_resource type="PackedScene" uid="uid://bmu6860l1dwqx" path="res://gui/TrackPiece.tscn" id="1_k0s2x"]
 [ext_resource type="PackedScene" uid="uid://cvx6jp57mgede" path="res://scenes/tunnel.tscn" id="2_r6yfw"]
 [ext_resource type="PackedScene" uid="uid://c3pl2mg6e4rol" path="res://scenes/Pinball.tscn" id="3_lupcg"]
 [ext_resource type="PackedScene" uid="uid://pjhqypun8xd6" path="res://scenes/CircleDeLoop.tscn" id="4_8vvwt"]
-[ext_resource type="Texture2D" uid="uid://yys88ln3ehwe" path="res://gui/black.png" id="5_b0tvw"]
+[ext_resource type="Texture2D" path="res://gui/black.png" id="5_b0tvw"]
 [ext_resource type="PackedScene" uid="uid://c28mwy6ote8d" path="res://scenes/marble.tscn" id="6_sk8lg"]
 [ext_resource type="Script" path="res://scripts/FollowCamera.gd" id="7_ats6y"]
 [ext_resource type="PackedScene" uid="uid://be8yj036jb8lr" path="res://scenes/deathzone.tscn" id="8_6yadn"]
-[ext_resource type="PackedScene" path="res://scenes/star.tscn" id="9_f4mex"]
+[ext_resource type="PackedScene" uid="uid://h4vlbnirou3m" path="res://scenes/star.tscn" id="9_f4mex"]
 
 [node name="LevelTemplate" type="Node2D"]
 

@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://tbedqog4qrjc"]
 
-[ext_resource type="PackedScene" uid="uid://bmu6860l1dwqx" path="res://scenes/TrackPiece.tscn" id="1_533i5"]
+[ext_resource type="PackedScene" uid="uid://bmu6860l1dwqx" path="res://gui/TrackPiece.tscn" id="1_533i5"]
 [ext_resource type="PackedScene" uid="uid://cvx6jp57mgede" path="res://scenes/tunnel.tscn" id="2_flqs1"]
 [ext_resource type="PackedScene" uid="uid://c3pl2mg6e4rol" path="res://scenes/Pinball.tscn" id="3_eaqme"]
 [ext_resource type="PackedScene" uid="uid://pjhqypun8xd6" path="res://scenes/CircleDeLoop.tscn" id="4_0tsly"]
-[ext_resource type="PackedScene" uid="uid://7ok3fewqd1cw" path="res://gui/win.tscn" id="5_7xmgg"]
+[ext_resource type="PackedScene" uid="uid://b701bspmy6xya" path="res://gui/win.tscn" id="5_7xmgg"]
 [ext_resource type="PackedScene" path="res://gui/background.tscn" id="5_7745b"]
 [ext_resource type="PackedScene" uid="uid://c28mwy6ote8d" path="res://scenes/marble.tscn" id="6_o5ede"]
 [ext_resource type="PackedScene" uid="uid://be8yj036jb8lr" path="res://scenes/deathzone.tscn" id="6_sqw54"]
