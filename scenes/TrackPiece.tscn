@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqx8bo12ohbto"]
+[gd_scene load_steps=5 format=3 uid="uid://bmu6860l1dwqx"]
 
-[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://gui/color.tres" id="1_a4mtc"]
+[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://color.tres" id="1_a4mtc"]
 [ext_resource type="Texture2D" uid="uid://dq7foj2p0me8k" path="res://assets/white.png" id="1_r1meq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bj7nd"]

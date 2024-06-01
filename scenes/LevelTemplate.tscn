@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://c03r7e407vivg"]
+[gd_scene load_steps=8 format=3 uid="uid://tbedqog4qrjc"]
 
-[ext_resource type="PackedScene" uid="uid://cqx8bo12ohbto" path="res://scenes/TrackPiece.tscn" id="1_533i5"]
-[ext_resource type="PackedScene" uid="uid://cvx6jp57mgede" path="res://scenes/tunnel.tscn" id="2_flqs1"]
+[ext_resource type="PackedScene" uid="uid://bmu6860l1dwqx" path="res://scenes/TrackPiece.tscn" id="1_533i5"]
+[ext_resource type="PackedScene" path="res://scenes/tunnel.tscn" id="2_flqs1"]
 [ext_resource type="PackedScene" uid="uid://c3pl2mg6e4rol" path="res://scenes/Pinball.tscn" id="3_eaqme"]
 [ext_resource type="PackedScene" uid="uid://pjhqypun8xd6" path="res://scenes/CircleDeLoop.tscn" id="4_0tsly"]
 [ext_resource type="Texture2D" uid="uid://yys88ln3ehwe" path="res://gui/black.png" id="5_od0bd"]
@@ -12,7 +12,7 @@
 
 [node name="All Pieces" type="CanvasLayer" parent="."]
 process_mode = 4
-layer = -1
+layer = -5
 
 [node name="TrackPiece" parent="All Pieces" instance=ExtResource("1_533i5")]
 position = Vector2(-462, -161)
@@ -35,6 +35,10 @@ layer = -5
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -681.0
+offset_top = -593.0
+offset_right = 2263.0
+offset_bottom = 2511.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_od0bd")
@@ -42,8 +46,10 @@ texture = ExtResource("5_od0bd")
 [node name="StartingPoint" type="Node2D" parent="Required"]
 position = Vector2(115, 68)
 
-[node name="Marble" parent="Required" instance=ExtResource("6_o5ede")]
+[node name="Marble" parent="Required" node_paths=PackedStringArray("starting_point") instance=ExtResource("6_o5ede")]
+position = Vector2(-475, -232)
 collision_mask = 7
+starting_point = NodePath("../StartingPoint")
 
 [node name="Camera2D" type="Camera2D" parent="Required" node_paths=PackedStringArray("main_marble")]
 script = ExtResource("7_aya2k")
