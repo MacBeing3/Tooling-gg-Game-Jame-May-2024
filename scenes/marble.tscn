@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c28mwy6ote8d"]
 
 [ext_resource type="Script" path="res://scripts/marble_movement.gd" id="1_7mjn2"]
-[ext_resource type="Texture2D" uid="uid://q1lh0oxr26jl" path="res://assets/Marble.png" id="2_4w2xt"]
+[ext_resource type="Texture2D" uid="uid://c8oor0yobvhuu" path="res://assets/marbles.png" id="2_le0ac"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_88wns"]
 radius = 20.0
@@ -15,7 +15,10 @@ extra_h_speed = 50
 shape = SubResource("CircleShape2D_88wns")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_4w2xt")
-hframes = 20
+position = Vector2(-2, -3)
+texture = ExtResource("2_le0ac")
+hframes = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

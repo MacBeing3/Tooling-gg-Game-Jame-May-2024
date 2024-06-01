@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://chc6h2cb3wlls"]
 
 [ext_resource type="Script" path="res://gui/menu.gd" id="1_dej3l"]
-[ext_resource type="Texture2D" uid="uid://yys88ln3ehwe" path="res://gui/black.png" id="2_jyo3v"]
+[ext_resource type="Texture2D" uid="uid://b7yvmxqhpmow6" path="res://assets/Laodingscreen.webp" id="2_rlsj6"]
 [ext_resource type="Theme" uid="uid://d15rsb5jyxtgp" path="res://gui/default_theme.tres" id="3_7y4ik"]
 [ext_resource type="Shader" uid="uid://dygv11racet0" path="res://color.tres" id="3_cohok"]
 [ext_resource type="Texture2D" uid="uid://c20rtw3jyx5n5" path="res://assets/settings-icon-2048x2046-cw28eevx.png" id="3_m0ge5"]
@@ -19,6 +19,7 @@ grow_vertical = 2
 script = ExtResource("1_dej3l")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+<<<<<<< Updated upstream
 layer = -4
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
@@ -28,32 +29,34 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_jyo3v")
+=======
+layer = -2
+>>>>>>> Stashed changes
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.117
-anchor_top = 0.5
-anchor_right = 0.117
-anchor_bottom = 0.5
-offset_left = -37.76
-offset_top = -50.0
-offset_right = 197.24
-offset_bottom = 51.0
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_rlsj6")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-size_flags_vertical = 8
-
-[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Play" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.588235)
 material = SubResource("ShaderMaterial_2eorn")
 layout_mode = 2
-text = "Play"
+offset_left = 125.0
+offset_top = 234.0
+offset_right = 467.0
+offset_bottom = 406.0
 
-[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-text = "Quit"
+offset_left = 116.0
+offset_top = 414.0
+offset_right = 466.0
+offset_bottom = 592.0
 
 [node name="Options" type="Button" parent="."]
 layout_mode = 2
@@ -66,6 +69,6 @@ icon = ExtResource("3_m0ge5")
 flat = true
 expand_icon = true
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
