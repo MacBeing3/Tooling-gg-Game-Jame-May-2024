@@ -14,7 +14,7 @@ config/name="Marble Rush"
 run/main_scene="res://gui/menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 run/max_fps=60
-config/icon="res://icon.svg"
+config/icon="res://gui/20240601_150118_0000.png"
 
 [autoload]
 

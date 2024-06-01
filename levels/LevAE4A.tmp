@@ -1,0 +1,208 @@
+[gd_scene load_steps=11 format=3 uid="uid://bcyosfcalixqv"]
+
+[ext_resource type="PackedScene" uid="uid://bmu6860l1dwqx" path="res://scenes/TrackPiece.tscn" id="1_lmfou"]
+[ext_resource type="PackedScene" uid="uid://bbk6u2ss8bt82" path="res://gui/win.tscn" id="1_wulub"]
+[ext_resource type="PackedScene" uid="uid://h4vlbnirou3m" path="res://scenes/star.tscn" id="2_8y6hw"]
+[ext_resource type="PackedScene" uid="uid://cvx6jp57mgede" path="res://scenes/tunnel.tscn" id="2_rfrqa"]
+[ext_resource type="PackedScene" uid="uid://c3pl2mg6e4rol" path="res://scenes/Pinball.tscn" id="3_4h7lk"]
+[ext_resource type="PackedScene" uid="uid://pjhqypun8xd6" path="res://scenes/CircleDeLoop.tscn" id="4_a6kie"]
+[ext_resource type="PackedScene" uid="uid://35qdlbfgk4ix" path="res://gui/background.tscn" id="5_tl6rr"]
+[ext_resource type="PackedScene" uid="uid://c28mwy6ote8d" path="res://scenes/marble.tscn" id="6_pw4xm"]
+[ext_resource type="Script" path="res://scripts/FollowCamera.gd" id="7_lnsp4"]
+[ext_resource type="PackedScene" uid="uid://be8yj036jb8lr" path="res://scenes/deathzone.tscn" id="8_4jfj5"]
+
+[node name="LevelTemplate" type="Node2D"]
+
+[node name="All Pieces" type="CanvasLayer" parent="."]
+process_mode = 4
+layer = 0
+
+[node name="Win" parent="All Pieces" instance=ExtResource("1_wulub")]
+position = Vector2(-462, -161)
+
+[node name="Star" parent="All Pieces/Win" instance=ExtResource("2_8y6hw")]
+
+[node name="TrackPiece" parent="All Pieces" instance=ExtResource("1_lmfou")]
+position = Vector2(-462, -161)
+
+[node name="Tunnel" parent="All Pieces" instance=ExtResource("2_rfrqa")]
+position = Vector2(-389, 131)
+scale = Vector2(1, 0.986688)
+
+[node name="Pinball" parent="All Pieces" instance=ExtResource("3_4h7lk")]
+position = Vector2(-437, 414)
+
+[node name="CircleDeLoop" parent="All Pieces" instance=ExtResource("4_a6kie")]
+position = Vector2(-467, 624)
+
+[node name="Required" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Required"]
+layer = -5
+
+[node name="Background" parent="Required/CanvasLayer" instance=ExtResource("5_tl6rr")]
+position = Vector2(4, -21)
+rotation = -0.00296817
+
+[node name="StartingPoint" type="Node2D" parent="Required"]
+position = Vector2(115, 68)
+
+[node name="Marble" parent="Required" node_paths=PackedStringArray("starting_point") instance=ExtResource("6_pw4xm")]
+position = Vector2(-475, -232)
+collision_mask = 7
+starting_point = NodePath("../StartingPoint")
+
+[node name="Camera2D" type="Camera2D" parent="Required" node_paths=PackedStringArray("main_marble")]
+script = ExtResource("7_lnsp4")
+main_marble = NodePath("../Marble")
+
+[node name="Level_" type="Node2D" parent="."]
+
+[node name="TrackPiece2" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(668.99, 351.5)
+rotation = 0.00127121
+scale = Vector2(9.23769, 0.391209)
+
+[node name="TrackPiece3" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(246.97, 185.548)
+rotation = 0.428313
+scale = Vector2(8.58774, 0.482696)
+
+[node name="TrackPiece4" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(356.258, 156.816)
+rotation = 0.428313
+scale = Vector2(8.58774, 0.454767)
+
+[node name="TrackPiece5" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(935, 352)
+scale = Vector2(1, 0.395833)
+
+[node name="TrackPiece6" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(1007, 352)
+scale = Vector2(1, 0.395833)
+
+[node name="TrackPiece7" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(1079, 351)
+scale = Vector2(1, 0.395833)
+
+[node name="TrackPiece8" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(1037.01, 515.469)
+rotation = -0.830368
+scale = Vector2(8.76404, 0.395833)
+
+[node name="TrackPiece9" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(642, 689)
+rotation = -0.000421369
+scale = Vector2(8.76404, 0.395833)
+
+[node name="TrackPiece10" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(370, 755)
+rotation = 0.848222
+scale = Vector2(8.76404, 0.395833)
+
+[node name="TrackPiece11" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(665, 1096)
+rotation = 0.834884
+scale = Vector2(7.65777, 0.395833)
+
+[node name="TrackPiece12" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(787, 1452)
+rotation = 1.5695
+scale = Vector2(7.65777, 0.395833)
+
+[node name="TrackPiece13" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(843, 1403)
+rotation = 1.5695
+scale = Vector2(9.11621, 0.395833)
+
+[node name="TrackPiece14" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(1349.53, 1121.37)
+rotation = 0.793743
+scale = Vector2(3.7209, 0.33244)
+
+[node name="TrackPiece15" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(1495, 1211)
+rotation = 0.307519
+scale = Vector2(3.7209, 0.33244)
+
+[node name="TrackPiece16" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(1683, 1242)
+rotation = -0.496637
+scale = Vector2(1.24636, 0.33244)
+
+[node name="TrackPiece17" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(2032.83, 1230.04)
+rotation = 0.000168316
+scale = Vector2(13.7973, 0.374031)
+
+[node name="TrackPiece18" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(1503, 1303)
+rotation = 0.400437
+scale = Vector2(5.97058, 0.374031)
+
+[node name="Pinball2" parent="Level_" node_paths=PackedStringArray("player_marble") instance=ExtResource("3_4h7lk")]
+position = Vector2(903, 1720)
+player_marble = NodePath("../../Required/Marble")
+
+[node name="CircleDeLoop3" parent="Level_" instance=ExtResource("4_a6kie")]
+position = Vector2(1759, 1408)
+
+[node name="CircleDeLoop4" parent="Level_" instance=ExtResource("4_a6kie")]
+position = Vector2(1959, 1520)
+
+[node name="TrackPiece19" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(2046, 1668)
+rotation = -0.810497
+scale = Vector2(5.97058, 0.374031)
+
+[node name="TrackPiece20" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(1830, 1887)
+rotation = -0.81841
+scale = Vector2(2.681, 0.374031)
+
+[node name="TrackPiece21" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(1668, 2064)
+rotation = -0.82301
+scale = Vector2(2.681, 0.374031)
+
+[node name="TrackPiece22" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(1526, 2220)
+rotation = -0.834275
+scale = Vector2(2.681, 0.374031)
+
+[node name="TrackPiece23" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(1399, 2467)
+rotation = -0.852716
+scale = Vector2(7.10197, 0.380937)
+
+[node name="TrackPiece24" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(1305, 2493)
+rotation = -0.852716
+scale = Vector2(7.10197, 0.380937)
+
+[node name="Deathzone" parent="Level_" instance=ExtResource("8_4jfj5")]
+position = Vector2(-29, 3179)
+scale = Vector2(2.95249, 1)
+
+[node name="Deathzone2" parent="Level_" instance=ExtResource("8_4jfj5")]
+position = Vector2(1926, 1110)
+rotation = 1.57281
+scale = Vector2(0.112488, 0.84)
+
+[node name="Deathzone3" parent="Level_" instance=ExtResource("8_4jfj5")]
+position = Vector2(992, 772)
+rotation = 2.59942
+scale = Vector2(0.112488, 0.84)
+
+[node name="Deathzone4" parent="Level_" instance=ExtResource("8_4jfj5")]
+position = Vector2(486, 1022)
+rotation = 4.11406
+scale = Vector2(0.0794382, 0.706305)
+
+[node name="Deathzone5" parent="Level_" instance=ExtResource("8_4jfj5")]
+position = Vector2(1022, 434)
+rotation = 3.15119
+scale = Vector2(0.157151, 0.511794)
+
+[node name="Win2" parent="Level_" instance=ExtResource("1_wulub")]
+position = Vector2(930, 2724)

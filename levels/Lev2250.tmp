@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://bcyosfcalixqv"]
+[gd_scene load_steps=11 format=3 uid="uid://bcyosfcalixqv"]
 
 [ext_resource type="PackedScene" uid="uid://bmu6860l1dwqx" path="res://scenes/TrackPiece.tscn" id="1_lmfou"]
+[ext_resource type="PackedScene" uid="uid://bbk6u2ss8bt82" path="res://gui/win.tscn" id="1_wulub"]
+[ext_resource type="PackedScene" uid="uid://h4vlbnirou3m" path="res://scenes/star.tscn" id="2_8y6hw"]
 [ext_resource type="PackedScene" uid="uid://cvx6jp57mgede" path="res://scenes/tunnel.tscn" id="2_rfrqa"]
 [ext_resource type="PackedScene" uid="uid://c3pl2mg6e4rol" path="res://scenes/Pinball.tscn" id="3_4h7lk"]
 [ext_resource type="PackedScene" uid="uid://pjhqypun8xd6" path="res://scenes/CircleDeLoop.tscn" id="4_a6kie"]
-[ext_resource type="PackedScene" uid="uid://35qdlbfgk4ix" path="res://background.tscn" id="5_tl6rr"]
+[ext_resource type="PackedScene" uid="uid://35qdlbfgk4ix" path="res://gui/background.tscn" id="5_tl6rr"]
 [ext_resource type="PackedScene" uid="uid://c28mwy6ote8d" path="res://scenes/marble.tscn" id="6_pw4xm"]
 [ext_resource type="Script" path="res://scripts/FollowCamera.gd" id="7_lnsp4"]
 [ext_resource type="PackedScene" uid="uid://be8yj036jb8lr" path="res://scenes/deathzone.tscn" id="8_4jfj5"]
@@ -14,6 +16,11 @@
 [node name="All Pieces" type="CanvasLayer" parent="."]
 process_mode = 4
 layer = 0
+
+[node name="Win" parent="All Pieces" instance=ExtResource("1_wulub")]
+position = Vector2(-462, -161)
+
+[node name="Star" parent="All Pieces/Win" instance=ExtResource("2_8y6hw")]
 
 [node name="TrackPiece" parent="All Pieces" instance=ExtResource("1_lmfou")]
 position = Vector2(-462, -161)
@@ -57,14 +64,14 @@ rotation = 0.00127121
 scale = Vector2(9.23769, 0.391209)
 
 [node name="TrackPiece3" parent="Level_" instance=ExtResource("1_lmfou")]
-position = Vector2(245.506, 188.754)
+position = Vector2(246.97, 185.548)
 rotation = 0.428313
-scale = Vector2(8.58774, 0.629539)
+scale = Vector2(8.58774, 0.482696)
 
 [node name="TrackPiece4" parent="Level_" instance=ExtResource("1_lmfou")]
-position = Vector2(358, 153)
+position = Vector2(356.258, 156.816)
 rotation = 0.428313
-scale = Vector2(8.58774, 0.629539)
+scale = Vector2(8.58774, 0.454767)
 
 [node name="TrackPiece5" parent="Level_" instance=ExtResource("1_lmfou")]
 position = Vector2(935, 352)
@@ -149,27 +156,27 @@ rotation = -0.810497
 scale = Vector2(5.97058, 0.374031)
 
 [node name="TrackPiece20" parent="Level_" instance=ExtResource("1_lmfou")]
-position = Vector2(1834, 1877.33)
-rotation = -0.810497
+position = Vector2(1830, 1887)
+rotation = -0.81841
 scale = Vector2(2.681, 0.374031)
 
 [node name="TrackPiece21" parent="Level_" instance=ExtResource("1_lmfou")]
-position = Vector2(1668, 2078)
-rotation = -0.810497
+position = Vector2(1668, 2064)
+rotation = -0.82301
 scale = Vector2(2.681, 0.374031)
 
 [node name="TrackPiece22" parent="Level_" instance=ExtResource("1_lmfou")]
-position = Vector2(1536, 2240)
-rotation = -0.810497
+position = Vector2(1526, 2220)
+rotation = -0.834275
 scale = Vector2(2.681, 0.374031)
 
 [node name="TrackPiece23" parent="Level_" instance=ExtResource("1_lmfou")]
-position = Vector2(1375, 2423)
+position = Vector2(1399, 2467)
 rotation = -0.852716
 scale = Vector2(7.10197, 0.380937)
 
 [node name="TrackPiece24" parent="Level_" instance=ExtResource("1_lmfou")]
-position = Vector2(1323, 2421)
+position = Vector2(1305, 2493)
 rotation = -0.852716
 scale = Vector2(7.10197, 0.380937)
 
@@ -196,3 +203,8 @@ scale = Vector2(0.0794382, 0.706305)
 position = Vector2(1022, 434)
 rotation = 3.15119
 scale = Vector2(0.157151, 0.511794)
+
+[node name="Win2" parent="Level_" instance=ExtResource("1_wulub")]
+position = Vector2(930, 2724)
+
+[node name="Star" parent="Level_/Win2" instance=ExtResource("2_8y6hw")]

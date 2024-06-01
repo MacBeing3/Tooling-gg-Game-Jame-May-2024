@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://rirfl8pl2m1h"]
+[gd_scene load_steps=8 format=3 uid="uid://rirfl8pl2m1h"]
 
+[ext_resource type="Theme" uid="uid://d15rsb5jyxtgp" path="res://gui/default_theme.tres" id="1_2mr2k"]
 [ext_resource type="Script" path="res://gui/settings.gd" id="1_o2bji"]
+[ext_resource type="Texture2D" uid="uid://c6okx3j6t305u" path="res://gui/stars background (2).png" id="2_b7qfu"]
+[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://gui/color.tres" id="4_virmt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_enlp4"]
+shader = ExtResource("4_virmt")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_46pq6"]
+shader = ExtResource("4_virmt")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oad1i"]
+shader = ExtResource("4_virmt")
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -9,7 +21,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_2mr2k")
 script = ExtResource("1_o2bji")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_b7qfu")
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 0
@@ -19,4 +38,113 @@ offset_right = 77.0
 offset_bottom = 83.0
 text = "Back"
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 110.0
+offset_right = 396.0
+offset_bottom = 157.0
+theme_override_font_sizes/font_size = 30
+text = "CREDITS:
+"
+
+[node name="Font" type="Button" parent="."]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 138.0
+offset_right = 370.0
+offset_bottom = 211.0
+text = "Font: 04b_30"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 216.0
+offset_right = 417.0
+offset_bottom = 263.0
+theme_override_font_sizes/font_size = 27
+text = "PROGRAMMERS:
+"
+
+[node name="Mac" type="Button" parent="."]
+material = SubResource("ShaderMaterial_enlp4")
+layout_mode = 0
+offset_left = 98.0
+offset_top = 254.0
+offset_right = 210.0
+offset_bottom = 327.0
+text = "Mac"
+flat = true
+
+[node name="Ori" type="Button" parent="."]
+material = SubResource("ShaderMaterial_46pq6")
+layout_mode = 0
+offset_left = 100.0
+offset_top = 316.0
+offset_right = 148.0
+offset_bottom = 364.0
+text = "Ori"
+flat = true
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 406.0
+offset_right = 415.0
+offset_bottom = 453.0
+theme_override_font_sizes/font_size = 27
+text = "ARTIST:
+"
+
+[node name="Grime" type="Button" parent="."]
+material = SubResource("ShaderMaterial_oad1i")
+layout_mode = 0
+offset_left = 98.0
+offset_top = 444.0
+offset_right = 241.0
+offset_bottom = 517.0
+text = "Grime"
+flat = true
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.017
+anchor_bottom = 0.036
+offset_left = 222.0
+offset_top = 280.0
+offset_right = 548.416
+offset_bottom = 303.672
+theme_override_font_sizes/font_size = 15
+text = "discord: 599027006948114442 maclean3
+"
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.017
+anchor_bottom = 0.036
+offset_left = 222.0
+offset_top = 346.0
+offset_right = 548.416
+offset_bottom = 369.672
+theme_override_font_sizes/font_size = 15
+text = "discord: 1243700651947458663 oreo.011"
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.017
+anchor_bottom = 0.036
+offset_left = 240.0
+offset_top = 473.0
+offset_right = 681.416
+offset_bottom = 496.672
+theme_override_font_sizes/font_size = 15
+text = "discord: 791034642785501204 grime_cat"
+
 [connection signal="pressed" from="Back" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Font" to="." method="_on_font_pressed"]
+[connection signal="pressed" from="Mac" to="." method="_on_mac_pressed"]
+[connection signal="pressed" from="Ori" to="." method="_on_ori_pressed"]
+[connection signal="pressed" from="Grime" to="." method="_on_grime_pressed"]
