@@ -40,10 +40,10 @@ script = SubResource("GDScript_mnglq")
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(0.634368, 0.933688, 1, 1)
 layout_mode = 0
-offset_left = -46.0
-offset_top = -36.0
-offset_right = 1197.0
-offset_bottom = 692.0
+offset_left = -34.0
+offset_top = -41.0
+offset_right = 1209.0
+offset_bottom = 687.0
 texture = ExtResource("2_imeka")
 
 [node name="Button" type="Button" parent="."]
