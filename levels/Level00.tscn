@@ -1,7 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://buobecys81tb5"]
 
+<<<<<<< HEAD
 [ext_resource type="PackedScene" path="res://scenes/TrackPiece.tscn" id="1_k0s2x"]
 [ext_resource type="PackedScene" path="res://scenes/tunnel.tscn" id="2_r6yfw"]
+=======
+[ext_resource type="PackedScene" uid="uid://bmu6860l1dwqx" path="res://scenes/TrackPiece.tscn" id="1_k0s2x"]
+[ext_resource type="PackedScene" uid="uid://cvx6jp57mgede" path="res://scenes/tunnel.tscn" id="2_r6yfw"]
+>>>>>>> parent of 27e3bf0 (Revert "merge to MacBranch")
 [ext_resource type="PackedScene" uid="uid://c3pl2mg6e4rol" path="res://scenes/Pinball.tscn" id="3_lupcg"]
 [ext_resource type="PackedScene" uid="uid://pjhqypun8xd6" path="res://scenes/CircleDeLoop.tscn" id="4_8vvwt"]
 [ext_resource type="Texture2D" uid="uid://yys88ln3ehwe" path="res://gui/black.png" id="5_b0tvw"]

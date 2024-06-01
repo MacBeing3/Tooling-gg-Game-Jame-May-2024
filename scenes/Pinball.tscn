@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://c3pl2mg6e4rol"]
 
 [ext_resource type="Script" path="res://scenes/Pinball.gd" id="1_mgtq0"]
-[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://gui/color.tres" id="2_4e6tv"]
+[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://color.tres" id="2_4e6tv"]
 [ext_resource type="Script" path="res://scripts/PlayerDetector.gd" id="2_anxsk"]
 [ext_resource type="Texture2D" uid="uid://cbgjtj1h0ei0g" path="res://assets/output-onlinepngtools.png" id="3_ts83a"]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/Tunnel.gd" id="1_3s08l"]
 [ext_resource type="Texture2D" uid="uid://dq7foj2p0me8k" path="res://assets/white.png" id="2_0r1op"]
-[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://gui/color.tres" id="2_gexmy"]
+[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://color.tres" id="2_gexmy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_55kih"]
 size = Vector2(400.504, 20)

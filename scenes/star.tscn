@@ -1,8 +1,13 @@
 [gd_scene load_steps=6 format=3 uid="uid://csdfpxcxl35o1"]
 
 [ext_resource type="Script" path="res://scenes/star.gd" id="1_ldesb"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" path="res://assets/1717200983192.png" id="1_n7tuv"]
 [ext_resource type="Shader" uid="uid://dygv11racet0" path="res://gui/color.tres" id="2_bi3h6"]
+=======
+[ext_resource type="Texture2D" uid="uid://cu0k60gjln73w" path="res://assets/1717200983192.png" id="1_n7tuv"]
+[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://color.tres" id="2_bi3h6"]
+>>>>>>> parent of 27e3bf0 (Revert "merge to MacBranch")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ba75u"]
 size = Vector2(20.1445, 98.4274)
@@ -14,7 +19,10 @@ shader = ExtResource("2_bi3h6")
 script = ExtResource("1_ldesb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+<<<<<<< HEAD
 modulate = Color(1, 1, 1, 0)
+=======
+>>>>>>> parent of 27e3bf0 (Revert "merge to MacBranch")
 position = Vector2(179, 148)
 rotation = -3.14159
 scale = Vector2(15.1807, -2.77362)
