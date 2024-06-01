@@ -1,11 +1,11 @@
 [gd_scene load_steps=40 format=3 uid="uid://ct0kfg26tckfs"]
 
+[ext_resource type="PackedScene" uid="uid://35qdlbfgk4ix" path="res://background.tscn" id="1_4yea0"]
 [ext_resource type="PackedScene" uid="uid://c28mwy6ote8d" path="res://scenes/marble.tscn" id="1_6u6cr"]
 [ext_resource type="Script" path="res://scripts/FollowCamera.gd" id="1_bbp4u"]
 [ext_resource type="PackedScene" uid="uid://c3pl2mg6e4rol" path="res://scenes/Pinball.tscn" id="3_1f1ho"]
-[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://gui/color.tres" id="3_fdx2s"]
+[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://color.tres" id="3_fdx2s"]
 [ext_resource type="PackedScene" uid="uid://pjhqypun8xd6" path="res://scenes/CircleDeLoop.tscn" id="4_i6ia0"]
-[ext_resource type="Texture2D" uid="uid://yys88ln3ehwe" path="res://gui/black.png" id="6_v05fr"]
 [ext_resource type="PackedScene" uid="uid://be8yj036jb8lr" path="res://scenes/deathzone.tscn" id="7_mtws0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t54ht"]
@@ -106,13 +106,7 @@ shader = ExtResource("3_fdx2s")
 
 [node name="Level1" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -1264.0
-offset_top = -655.0
-offset_right = 5636.0
-offset_bottom = 4312.0
-scale = Vector2(158.248, 80.3875)
-texture = ExtResource("6_v05fr")
+[node name="Background" parent="." instance=ExtResource("1_4yea0")]
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("main_marble")]
 script = ExtResource("1_bbp4u")
@@ -271,7 +265,7 @@ position = Vector2(596, 1013)
 material = SubResource("ShaderMaterial_fvrup")
 position = Vector2(-21, -291.75)
 scale = Vector2(3.71875, 4.85938)
-polygon = PackedVector2Array(-10, 10, -5, 0, 0, -5, 7, -8, 10, -8, 10, -10, -10, -10)
+polygon = PackedVector2Array(-10, 10, -5, 0, -0.268906, -4.99036, 7, -8, 10, -8, 10, -10, -10, -10)
 
 [node name="Section4" type="Node2D" parent="."]
 

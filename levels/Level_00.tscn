@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://bcyosfcalixqv"]
+
+[ext_resource type="PackedScene" uid="uid://bmu6860l1dwqx" path="res://scenes/TrackPiece.tscn" id="1_lmfou"]
+[ext_resource type="PackedScene" uid="uid://cvx6jp57mgede" path="res://scenes/tunnel.tscn" id="2_rfrqa"]
+[ext_resource type="PackedScene" uid="uid://c3pl2mg6e4rol" path="res://scenes/Pinball.tscn" id="3_4h7lk"]
+[ext_resource type="PackedScene" uid="uid://pjhqypun8xd6" path="res://scenes/CircleDeLoop.tscn" id="4_a6kie"]
+[ext_resource type="PackedScene" uid="uid://35qdlbfgk4ix" path="res://background.tscn" id="5_tl6rr"]
+[ext_resource type="PackedScene" uid="uid://c28mwy6ote8d" path="res://scenes/marble.tscn" id="6_pw4xm"]
+[ext_resource type="Script" path="res://scripts/FollowCamera.gd" id="7_lnsp4"]
+
+[node name="LevelTemplate" type="Node2D"]
+
+[node name="All Pieces" type="CanvasLayer" parent="."]
+process_mode = 4
+layer = 0
+
+[node name="TrackPiece" parent="All Pieces" instance=ExtResource("1_lmfou")]
+position = Vector2(-462, -161)
+
+[node name="Tunnel" parent="All Pieces" instance=ExtResource("2_rfrqa")]
+position = Vector2(-389, 131)
+
+[node name="Pinball" parent="All Pieces" instance=ExtResource("3_4h7lk")]
+position = Vector2(-437, 414)
+
+[node name="CircleDeLoop" parent="All Pieces" instance=ExtResource("4_a6kie")]
+position = Vector2(-467, 624)
+
+[node name="Required" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Required"]
+layer = -5
+
+[node name="Background" parent="Required/CanvasLayer" instance=ExtResource("5_tl6rr")]
+
+[node name="StartingPoint" type="Node2D" parent="Required"]
+position = Vector2(115, 68)
+
+[node name="Marble" parent="Required" node_paths=PackedStringArray("starting_point") instance=ExtResource("6_pw4xm")]
+position = Vector2(-475, -232)
+collision_mask = 7
+starting_point = NodePath("../StartingPoint")
+
+[node name="Camera2D" type="Camera2D" parent="Required" node_paths=PackedStringArray("main_marble")]
+script = ExtResource("7_lnsp4")
+main_marble = NodePath("../Marble")
+
+[node name="Level_" type="Node2D" parent="."]
+
+[node name="Tunnel2" parent="Level_" instance=ExtResource("2_rfrqa")]
+position = Vector2(247, 191)
+tunnel_size = 2
+
+[node name="CircleDeLoop2" parent="Level_" instance=ExtResource("4_a6kie")]
+position = Vector2(-203, 418)
+
+[node name="TrackPiece2" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(-259, 578)
+rotation = 0.385424
+scale = Vector2(5.16667, 0.804274)
