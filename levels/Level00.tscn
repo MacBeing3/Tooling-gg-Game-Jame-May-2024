@@ -1,14 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://ctt37q61in4ov"]
+[gd_scene load_steps=10 format=3 uid="uid://buobecys81tb5"]
 
-[ext_resource type="PackedScene" uid="uid://bmu6860l1dwqx" path="res://scenes/TrackPiece.tscn" id="1_k0s2x"]
+[ext_resource type="PackedScene" path="res://scenes/TrackPiece.tscn" id="1_k0s2x"]
 [ext_resource type="PackedScene" path="res://scenes/tunnel.tscn" id="2_r6yfw"]
 [ext_resource type="PackedScene" uid="uid://c3pl2mg6e4rol" path="res://scenes/Pinball.tscn" id="3_lupcg"]
 [ext_resource type="PackedScene" uid="uid://pjhqypun8xd6" path="res://scenes/CircleDeLoop.tscn" id="4_8vvwt"]
 [ext_resource type="Texture2D" uid="uid://yys88ln3ehwe" path="res://gui/black.png" id="5_b0tvw"]
 [ext_resource type="PackedScene" uid="uid://c28mwy6ote8d" path="res://scenes/marble.tscn" id="6_sk8lg"]
 [ext_resource type="Script" path="res://scripts/FollowCamera.gd" id="7_ats6y"]
-[ext_resource type="PackedScene" uid="uid://cit860ag848cy" path="res://scenes/deathzone.tscn" id="8_6yadn"]
-[ext_resource type="PackedScene" uid="uid://bf68x76kdvrd4" path="res://scenes/star.tscn" id="9_f4mex"]
+[ext_resource type="PackedScene" uid="uid://be8yj036jb8lr" path="res://scenes/deathzone.tscn" id="8_6yadn"]
+[ext_resource type="PackedScene" uid="uid://csdfpxcxl35o1" path="res://scenes/star.tscn" id="9_f4mex"]
 
 [node name="LevelTemplate" type="Node2D"]
 
@@ -103,4 +103,4 @@ position = Vector2(1, 2202)
 scale = Vector2(2.81524, 0.798762)
 
 [node name="Star" parent="." instance=ExtResource("9_f4mex")]
-position = Vector2(837, 1191)
+position = Vector2(806, 1194)

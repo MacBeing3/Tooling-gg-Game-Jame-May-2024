@@ -6,7 +6,7 @@
 [ext_resource type="Shader" uid="uid://dygv11racet0" path="res://color.tres" id="3_fdx2s"]
 [ext_resource type="PackedScene" uid="uid://pjhqypun8xd6" path="res://scenes/CircleDeLoop.tscn" id="4_i6ia0"]
 [ext_resource type="Texture2D" uid="uid://yys88ln3ehwe" path="res://gui/black.png" id="6_v05fr"]
-[ext_resource type="PackedScene" uid="uid://cit860ag848cy" path="res://scenes/deathzone.tscn" id="7_mtws0"]
+[ext_resource type="PackedScene" uid="uid://be8yj036jb8lr" path="res://scenes/deathzone.tscn" id="7_mtws0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t54ht"]
 shader = ExtResource("3_fdx2s")
