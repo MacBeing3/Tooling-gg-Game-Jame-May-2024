@@ -163,8 +163,18 @@ position = Vector2(1536, 2240)
 rotation = -0.810497
 scale = Vector2(2.681, 0.374031)
 
+[node name="TrackPiece23" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(1375, 2423)
+rotation = -0.852716
+scale = Vector2(7.10197, 0.380937)
+
+[node name="TrackPiece24" parent="Level_" instance=ExtResource("1_lmfou")]
+position = Vector2(1323, 2421)
+rotation = -0.852716
+scale = Vector2(7.10197, 0.380937)
+
 [node name="Deathzone" parent="Level_" instance=ExtResource("8_4jfj5")]
-position = Vector2(-12, 2478)
+position = Vector2(-29, 3179)
 scale = Vector2(2.95249, 1)
 
 [node name="Deathzone2" parent="Level_" instance=ExtResource("8_4jfj5")]
