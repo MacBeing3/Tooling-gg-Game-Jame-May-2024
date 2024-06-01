@@ -25,6 +25,7 @@ func _on_level_00_pressed():
 	await Transitions.on_transition_finished
 	get_tree().change_scene_to_file(\"res://levels/level00.tscn\")
 
+
 "
 
 [node name="LevelSelectScreen" type="Control"]
