@@ -149,27 +149,27 @@ rotation = -0.810497
 scale = Vector2(5.97058, 0.374031)
 
 [node name="TrackPiece20" parent="Level_" instance=ExtResource("1_lmfou")]
-position = Vector2(1834, 1877.33)
-rotation = -0.810497
+position = Vector2(1830, 1887)
+rotation = -0.81841
 scale = Vector2(2.681, 0.374031)
 
 [node name="TrackPiece21" parent="Level_" instance=ExtResource("1_lmfou")]
-position = Vector2(1668, 2078)
-rotation = -0.810497
+position = Vector2(1668, 2064)
+rotation = -0.82301
 scale = Vector2(2.681, 0.374031)
 
 [node name="TrackPiece22" parent="Level_" instance=ExtResource("1_lmfou")]
-position = Vector2(1536, 2240)
-rotation = -0.810497
+position = Vector2(1526, 2220)
+rotation = -0.834275
 scale = Vector2(2.681, 0.374031)
 
 [node name="TrackPiece23" parent="Level_" instance=ExtResource("1_lmfou")]
-position = Vector2(1375, 2423)
+position = Vector2(1399, 2467)
 rotation = -0.852716
 scale = Vector2(7.10197, 0.380937)
 
 [node name="TrackPiece24" parent="Level_" instance=ExtResource("1_lmfou")]
-position = Vector2(1323, 2421)
+position = Vector2(1305, 2493)
 rotation = -0.852716
 scale = Vector2(7.10197, 0.380937)
 
