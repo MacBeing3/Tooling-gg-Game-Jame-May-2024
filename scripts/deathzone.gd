@@ -1,5 +1,6 @@
 extends Area2D
 
+
 func _ready():
 	body_entered.connect(on_player_entered)
 

@@ -34,21 +34,22 @@ func _physics_process(delta):
 	match current_size:
 		size.small: 
 			collision_shape_2d.set_scale(Vector2(0.5,0.5))
-			sprite_2d.set_scale(Vector2(0.5,0.5))
+			#sprite_2d.set_scale(Vector2(0.5,0.5))
+			sprite_2d.frame = 0
 		size.normal: 
 			collision_shape_2d.set_scale(Vector2(1,1))
-			sprite_2d.set_scale(Vector2(1,1))
-		
+			#sprite_2d.set_scale(Vector2(1,1))
+			sprite_2d.frame = 1
 		size.big:
 			collision_shape_2d.set_scale(Vector2(1.25,1.25))
-			sprite_2d.set_scale(Vector2(1.75,1.75))
-		
+			#sprite_2d.set_scale(Vector2(1.75,1.75))
+			sprite_2d.frame = 2
 		
 #	if is_attached:
 #		freeze
 #		global_position = node_attached_to.global_position
-
-	_reset_level()
+	if Input.is_action_pressed("Restart"):
+		reset_level()
 	
 
 #
@@ -67,8 +68,7 @@ func _unhandled_input(event):
 #	if event.is_action_pressed("ui_accept"):
 #		set_linear_velocity(Vector2(0,0))
 
-func _reset_level():
-	if Input.is_action_pressed("Restart"):
+func reset_level():
 		global_position = starting_point.global_position
 		linear_velocity = Vector2(0,0)
 		angular_velocity = 0

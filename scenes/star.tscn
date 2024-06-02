@@ -5,24 +5,24 @@
 [ext_resource type="Shader" uid="uid://dygv11racet0" path="res://color.tres" id="2_bi3h6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ba75u"]
-size = Vector2(20.1445, 98.4274)
+size = Vector2(20.1445, 50.8361)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mbv7e"]
 shader = ExtResource("2_bi3h6")
 
 [node name="Star" type="Area2D"]
+collision_layer = 0
 script = ExtResource("1_ldesb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(179, 148)
+position = Vector2(-1.14083e-05, 4.49998)
 rotation = -3.14159
 scale = Vector2(15.1807, -2.77362)
 shape = SubResource("RectangleShape2D_ba75u")
-debug_color = Color(0, 0.6, 0.701961, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_mbv7e")
-position = Vector2(113.75, 211.75)
 scale = Vector2(0.5, 0.485019)
 texture = ExtResource("1_n7tuv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

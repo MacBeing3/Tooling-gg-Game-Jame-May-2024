@@ -2,12 +2,14 @@
 
 [ext_resource type="Theme" uid="uid://d15rsb5jyxtgp" path="res://gui/default_theme.tres" id="1_q2hyr"]
 [ext_resource type="Texture2D" uid="uid://dlxlprpjop8pv" path="res://gui/stars background (1).png" id="2_gxmt7"]
-[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://gui/color.tres" id="3_ivlh4"]
+[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://color.tres" id="3_ivlh4"]
 
 [sub_resource type="GDScript" id="GDScript_mnglq"]
 script/source = "extends Control
 
-
+func _ready():
+	$Button.pressed.connect(_on_button_pressed)
+	$Level_01.pressed.connect(_on_level_01_pressed)
 
 func _on_button_pressed():
 	Transitions.transition()
@@ -16,9 +18,9 @@ func _on_button_pressed():
 
 
 func _on_level_01_pressed():
-	Transitions.transition()
-	await Transitions.on_transition_finished
-	get_tree().change_scene_to_file(\"res://levels/level_01.tscn\")
+	#Transitions.transition()
+	#await Transitions.on_transition_finished
+	get_tree().change_scene_to_file(\"res://levels/level01.tscn\")
 
 "
 
@@ -61,6 +63,3 @@ offset_bottom = 243.0
 text = "Level 01
 "
 flat = true
-
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Level_01" to="." method="_on_level_01_pressed"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://c3pl2mg6e4rol"]
 
 [ext_resource type="Script" path="res://scenes/Pinball.gd" id="1_mgtq0"]
-[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://gui/color.tres" id="2_4e6tv"]
+[ext_resource type="Shader" uid="uid://dygv11racet0" path="res://color.tres" id="2_4e6tv"]
 [ext_resource type="Script" path="res://scripts/PlayerDetector.gd" id="2_anxsk"]
 [ext_resource type="Texture2D" uid="uid://cbgjtj1h0ei0g" path="res://assets/output-onlinepngtools.png" id="3_ts83a"]
 
@@ -68,9 +68,9 @@ _data = {
 
 [sub_resource type="Curve2D" id="Curve2D_n4r52"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -21.9996, 81.0001, 0, 0, 0, 0, -187, 80.0007, 0, 0, 0, 0, -768, 107.003, 0, 0, 0, 0, -809, 88.0029, 0, 0, 0, 0, -821.81, 48.3378, 0, 0, 0, 0, -820.001, -247.997, 0, 0, 0, 0, -811.001, -280.997, 0, 0, 0, 0, -791.001, -317.997, 0, 0, 0, 0, -758.034, -362.727, 0, 0, 0, 0, -655.716, -421.341)
+"points": PackedVector2Array(0, 0, 0, 0, -21.9996, 81.0001, 0, 0, 0, 0, -187, 80.0007, 0, 0, 0, 0, -768, 107.003, 0, 0, 0, 0, -809, 88.0029, 0, 0, 0, 0, -821.81, 48.3378, 0, 0, 0, 0, -852, -115.997, 0, 0, 0, 0, -832.001, -251.997, 0, 0, 0, 0, -808.001, -292.997, 0, 0, 0, 0, -787.001, -323.997, 0, 0, 0, 0, -746.001, -366.997, 0, 0, 0, 0, -720.001, -395.997, 0, 0, 0, 0, -681.001, -411.998)
 }
-point_count = 10
+point_count = 12
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wo3xk"]
 size = Vector2(11, 60)
